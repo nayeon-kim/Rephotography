@@ -22,7 +22,7 @@
 		<key>09065A1F3A399F36DAB7A8742479488A887D66A3</key>
 		<string>../../..</string>
 		<key>57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0</key>
-		<string>../../..OpenCV-iOS/</string>
+		<string>../../..OpenCV-iOS</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/nayeon-kim/Rephotography.git</string>
@@ -36,17 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0</string>
+			<string>09065A1F3A399F36DAB7A8742479488A887D66A3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OpenCV-iOS</string>
+			<string>Rephotography</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>09065A1F3A399F36DAB7A8742479488A887D66A3</string>
+			<string>57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Rephotography</string>
+			<string>RephotographyOpenCV-iOS</string>
 		</dict>
 	</array>
 </dict>

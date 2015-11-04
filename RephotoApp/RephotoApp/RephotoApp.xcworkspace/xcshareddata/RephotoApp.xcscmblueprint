@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "09065A1F3A399F36DAB7A8742479488A887D66A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0" : 0,
+    "09065A1F3A399F36DAB7A8742479488A887D66A3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "39DE4063-BAF0-441A-91D2-0DFA766A9957",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0" : "Rephotography\/OpenCV-iOS\/",
+    "09065A1F3A399F36DAB7A8742479488A887D66A3" : "Rephotography\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RephotoApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RephotoApp\/RephotoApp\/RephotoApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nayeon-kim\/Rephotography.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "09065A1F3A399F36DAB7A8742479488A887D66A3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Fl0p\/OpenCV-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57D45B3DA1863BE7FFCC8D46BF9991746D00C1D0"
+    }
+  ]
+}
