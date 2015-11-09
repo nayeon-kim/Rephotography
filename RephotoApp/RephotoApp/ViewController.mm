@@ -41,7 +41,7 @@
 
 #pragma mark - UI Actions
 
-- (IBAction)actionStart:(id)sender;
+- (IBAction)captureStart:(id)sender;
 {
     printf("here!");
     [self.videoCamera start];

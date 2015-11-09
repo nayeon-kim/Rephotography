@@ -33,7 +33,7 @@ using namespace cv;
 //@property (weak, nonatomic) IBOutlet UIButton* startButton;
 //@property (nonatomic, retain) CvVideoCamera* videoCamera;
 
-- (IBAction)actionStart:(id)sender;
+- (IBAction)captureStart:(id)sender;
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 
 

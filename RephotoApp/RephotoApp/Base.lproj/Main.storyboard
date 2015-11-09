@@ -10,22 +10,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oeR-ZO-3o6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mrV-qJ-2pk">
-                                <rect key="frame" x="37" y="46" width="301" height="402"/>
+                                <rect key="frame" x="20" y="46" width="280" height="366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kqy-G7-JA7">
-                                <rect key="frame" x="44" y="473" width="287" height="80"/>
+                                <rect key="frame" x="20" y="437" width="280" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.6518250761427633" blue="0.92856097590398057" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="start"/>
+                                <color key="backgroundColor" red="0.64961362310213822" green="1" blue="0.72810496247597434" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="start">
+                                    <color key="titleColor" red="0.0032426257929216717" green="0.28874385388971335" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="actionStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jfv-4f-Vhy"/>
+                                    <action selector="captureStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQV-4N-4E6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +36,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="button" destination="Kqy-G7-JA7" id="6IO-LM-ccP"/>
                         <outlet property="imageView" destination="mrV-qJ-2pk" id="4w5-za-tN6"/>
