@@ -18,36 +18,55 @@
 @implementation ViewController
 //@synthesize imageView;
 @synthesize videoCamera;
+//@synthesize loadedImageView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:@"Welcome to OpenCV" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//    [alert show];
-    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:imageView];
+//    Initialize Video
+    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:videoCaptureView];
     self.videoCamera.delegate = self;
     self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset352x288;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
 //    self.videoCamera.grayscale = NO;
+    [self.videoCamera start];
 }
 
 
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 #pragma mark - UI Actions
 
-- (IBAction)captureStart:(id)sender;
+//- (IBAction)captureStart:(id)sender;
+//{
+//    printf("here!");
+//    [self.videoCamera start];
+//    NSLog(@"video camera running: %d", [self.videoCamera running]);
+//    NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
+//}
+
+- (IBAction)didTapLoadButton:(id)sender;
 {
-    printf("here!");
-    [self.videoCamera start];
-    NSLog(@"video camera running: %d", [self.videoCamera running]);
-    NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    pickerController.delegate = self;
+    [self presentModalViewController:pickerController animated:YES];
+
 }
+#pragma mark -
+#pragma mark UIImagePickerControllerDelegate
+
+- (void) imagePickerController:(UIImagePickerController *)picker
+         didFinishPickingImage:(UIImage *)image
+                   editingInfo:(NSDictionary *)editingInfo
+{
+    self->loadedImageView.image = image;
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 
 #pragma mark - Protocol CvVideoCameraDelegate
 

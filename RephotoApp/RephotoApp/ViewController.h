@@ -16,24 +16,22 @@
 #import <opencv2/highgui/cap_ios.h>
 using namespace cv;
 
-@interface ViewController : UIViewController <CvVideoCameraDelegate>
+@interface ViewController : UIViewController <CvVideoCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
-//    UIImage image;
-//    __weak UILabel* title;
-//    __weak UIImageView* imageView;
-//    __weak UIButton* button;
-    IBOutlet UIImageView* imageView;
-    IBOutlet UIButton* button;
-    
+    IBOutlet UIImageView* videoCaptureView;
+    IBOutlet UIImageView* loadedImageView;
+    IBOutlet UIButton* loadButton;
     CvVideoCamera* videoCamera;
 }
 
 //@property (weak, nonatomic) IBOutlet UILabel* title;
-//@property (weak, nonatomic) IBOutlet UIImageView* imageView;
-//@property (weak, nonatomic) IBOutlet UIButton* startButton;
 //@property (nonatomic, retain) CvVideoCamera* videoCamera;
+//@property (strong, nonatomic) IBOutlet UIImageView* loadedImageView;
+
 
 - (IBAction)captureStart:(id)sender;
+- (IBAction)didTapLoadButton:(id)sender;
+
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 
 
