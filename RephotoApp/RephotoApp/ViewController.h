@@ -14,6 +14,7 @@
 #import <Foundation/Foundation.h>
 
 #import <opencv2/highgui/cap_ios.h>
+#import <opencv2/highgui/ios.h>
 using namespace cv;
 
 @interface ViewController : UIViewController <CvVideoCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -29,10 +30,11 @@ using namespace cv;
 //@property (strong, nonatomic) IBOutlet UIImageView* loadedImageView;
 
 
-- (IBAction)captureStart:(id)sender;
+- (IBAction)didStartCapture:(id)sender;
 - (IBAction)didTapLoadButton:(id)sender;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
+@property (nonatomic, strong) cv::Mat refImage;
 
 
 @end

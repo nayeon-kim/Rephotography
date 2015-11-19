@@ -30,7 +30,6 @@
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
 //    self.videoCamera.grayscale = NO;
-    [self.videoCamera start];
 }
 
 
@@ -41,13 +40,14 @@
 
 #pragma mark - UI Actions
 
-//- (IBAction)captureStart:(id)sender;
-//{
-//    printf("here!");
-//    [self.videoCamera start];
-//    NSLog(@"video camera running: %d", [self.videoCamera running]);
-//    NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
-//}
+- (IBAction)didStartCapture:(id)sender;
+{
+    // TODO: only start camera capture if self.cvImg exists. else show message, please load an image
+    [self.videoCamera start];
+    // TODO: linear blend of each frame in self.videoCamera and self.cvImg
+    NSLog(@"video camera running: %d", [self.videoCamera running]);
+    NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
+}
 
 - (IBAction)didTapLoadButton:(id)sender;
 {
@@ -66,10 +66,13 @@
     self->loadedImageView.image = image;
     [self dismissModalViewControllerAnimated:YES];
     
-    [self overlayLoadedImage:image];
+    cv::Mat cvImg = [self UIImageToMat:image];
+    
+    //TODO: save cvImg as a property?
+    self.refImage = cvImg;
 }
 
-- (void) overlayLoadedImage: (UIImage *)loadedImage;
+- (cv::Mat) UIImageToMat: (UIImage *)loadedImage;
 {
     // Convert from UIImage to CV Mat
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(loadedImage.CGImage);
@@ -89,7 +92,8 @@
     
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), loadedImage.CGImage);
     CGContextRelease(contextRef);
-
+//    UIImageToMat(loadedImage, cvImage);
+    return cvMat;
 }
 
 #pragma mark - Protocol CvVideoCameraDelegate
@@ -97,6 +101,9 @@
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image;
 {
+    double alpha = 0.8;
+    double beta = 1.0 - alpha;
+    NSLog(@"processImage began running");
     // Do some OpenCV stuff with the image
     Mat image_copy;
     cvtColor(image, image_copy, CV_BGRA2BGR);
@@ -104,6 +111,10 @@
     // invert image
 //    bitwise_not(image_copy, image_copy);
 //    cvtColor(image_copy, image, CV_BGR2BGRA);
+    
+    //TODO: I guess this method runs when the video capture is turned on? (doub. check), so do linear blending with self.cvImg here.
+    
+    addWeighted( image_copy, alpha, self.refImage, beta, 0.0, dst);
 }
 #endif
 
