@@ -1,0 +1,14 @@
+# Package Information for pkg-config
+
+prefix=/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir_old=${prefix}/include/opencv
+includedir_new=${prefix}/include
+
+Name: OpenCV
+Description: Open Source Computer Vision Library
+Version: 3.0.0
+Libs: -L${exec_prefix}/lib -lopencv_world
+Libs.private: -L${exec_prefix}/share/OpenCV/3rdparty/lib -llibjpeg -llibpng -lzlib -l-framework Accelerate -l-framework AVFoundation -l-framework CoreGraphics -l-framework CoreImage -l-framework CoreMedia -l-framework CoreVideo -l-framework QuartzCore -l-framework AssetsLibrary -lstdc++
+Cflags: -I${includedir_old} -I${includedir_new}

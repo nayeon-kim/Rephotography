@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0ED674C5E94940899768FC7C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C266AF5868AF4FFBA0A11B78 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				36B84AF3591D490C9ECCD511 /* CMake Rules */,
+			);
+			dependencies = (
+				A48F3593EC3345518230850C /* PBXTargetDependency */,
+				56B3B24AD39B4B1C9DEC9315 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		2F57837EA08047B69490775B /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 89D73205DB854BE180A41418 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				7255D9F44C804A9F9EF96B56 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				CB3C754038C54AB994143C4B /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3C89B5BFC6934303A59175F6 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				AB9DEA38A90E4C4DBEFF9F29 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		3F08C5B41DE94A65AC2D1481 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 027F1CCC850E4382942D7AB7 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				551EAAFB64784C8DB115A68E /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				D530A8C1C62242E4BF82EBB2 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		995AA054170D436593FF856E /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B0DC6E60F0FF46C5BB09B523 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				9914E9F47C224B2D9626CF3C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00049EAC88DB444CB02DD76A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrio.c */ = {isa = PBXBuildFile; fileRef = DEEB6791E3B74D6F8BBD3882 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrio.c */; settings = {COMPILER_FLAGS = ""; }; };
+		019D9FE4517C40E994F575F6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpread.c */ = {isa = PBXBuildFile; fileRef = 28EB3F1BE6A943C8A7054583 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpread.c */; settings = {COMPILER_FLAGS = ""; }; };
+		05E4F5ACEFB64DA19CAA78AE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnglibconf.h */ = {isa = PBXBuildFile; fileRef = E48EA256F01B43DFA1C7E4D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnglibconf.h */; settings = {COMPILER_FLAGS = ""; }; };
+		260990EA646D4CD48345CC17 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwio.c */ = {isa = PBXBuildFile; fileRef = 2718A5B2474147A0ADC938AA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwio.c */; settings = {COMPILER_FLAGS = ""; }; };
+		27C8490A594B4707B4A32E79 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnginfo.h */ = {isa = PBXBuildFile; fileRef = 0452F2ECE2F24C26B1463C72 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnginfo.h */; settings = {COMPILER_FLAGS = ""; }; };
+		3E622E1E8CCE4BAF9E24E93D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngmem.c */ = {isa = PBXBuildFile; fileRef = 6E2D24F88071448997B24FCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngmem.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4FB6A9A77C174830A9806D13 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngconf.h */ = {isa = PBXBuildFile; fileRef = DC8BC1238E7945CAAFAA96C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngconf.h */; settings = {COMPILER_FLAGS = ""; }; };
+		547750A6A1864906869927DC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngread.c */ = {isa = PBXBuildFile; fileRef = 86F3A02A264C4FDBBBB16609 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngread.c */; settings = {COMPILER_FLAGS = ""; }; };
+		5C5CF013DD50442CA74FDE32 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngget.c */ = {isa = PBXBuildFile; fileRef = EEEC021C74CA4759A2941278 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngget.c */; settings = {COMPILER_FLAGS = ""; }; };
+		654546AB7D3145DB97F4F6C2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwtran.c */ = {isa = PBXBuildFile; fileRef = AD5D17EA465B4C71B4AE0CE2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwtran.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6C05E256E586443C9EA1E9EA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwrite.c */ = {isa = PBXBuildFile; fileRef = 831BC3E61C07435F8A04792A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwrite.c */; settings = {COMPILER_FLAGS = ""; }; };
+		74CA42873F0A44A69B72A7C9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F0419863893549EBBB4177A4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		79471A07418240DA80600C2E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.c */ = {isa = PBXBuildFile; fileRef = 6944ACEA7F734D248DA03975 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.c */; settings = {COMPILER_FLAGS = ""; }; };
+		BEAFB6A4C3EA409BB957C5AB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngerror.c */ = {isa = PBXBuildFile; fileRef = BAFA704771424E5184F3B1BE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngerror.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C626F116490542F89DC0B48D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.h */ = {isa = PBXBuildFile; fileRef = 3823AABC2F0049D7B8761D9F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.h */; settings = {COMPILER_FLAGS = ""; }; };
+		D4405FE4B3854C94B91CA5AC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrtran.c */ = {isa = PBXBuildFile; fileRef = 374CFC66D8C640E0B8ED9AE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrtran.c */; settings = {COMPILER_FLAGS = ""; }; };
+		DE99F02223D44AB3B3E664EA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwutil.c */ = {isa = PBXBuildFile; fileRef = 41748C460A954915A2D6DCBD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwutil.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E01CC7F690584B56B5BF8B5F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngset.c */ = {isa = PBXBuildFile; fileRef = A90DA254CF204FF19D2B9820 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngset.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E069888B47BF464EBEB976D4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngstruct.h */ = {isa = PBXBuildFile; fileRef = E6888A7AF0F6455C8DD279F5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngstruct.h */; settings = {COMPILER_FLAGS = ""; }; };
+		E45D2D2463CD4FC684E79CF3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngtrans.c */ = {isa = PBXBuildFile; fileRef = AECB1AE1C85145C7BFC510D4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngtrans.c */; settings = {COMPILER_FLAGS = ""; }; };
+		EDD624D570A944ED9EA4BDCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngdebug.h */ = {isa = PBXBuildFile; fileRef = 7261540F536440B38507A937 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngdebug.h */; settings = {COMPILER_FLAGS = ""; }; };
+		F383277213AD410A98081BCB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrutil.c */ = {isa = PBXBuildFile; fileRef = 59226BA08197459591268FF2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrutil.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F84D14EA8670457FA2E7EBA4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpriv.h */ = {isa = PBXBuildFile; fileRef = DE55FDFB87324150B2ECDA9E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpriv.h */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		277B8A3F00134D19B5B24DFB = {
+			isa = PBXBuildStyle;
+		};
+		2EAC4E563D62411FAF8F0899 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		394C159C56114C91A9A2E976 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		185C75A3E0E74D62B63A0083 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C282813FE134042AD8EBDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+		2ED2D4DD8FED4EEE90C1D46B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C282813FE134042AD8EBDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D814E0EF25F494091CF68ED;
+			remoteInfo = libpng;
+		};
+		6DD52CFEDC034138BE14997D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C282813FE134042AD8EBDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+		A055D5DCEA584A92A65850EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C282813FE134042AD8EBDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+		B0442F608FC64EEAA9BB6A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C282813FE134042AD8EBDE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0452F2ECE2F24C26B1463C72 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnginfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pnginfo.h; path = pnginfo.h; sourceTree = SOURCE_ROOT; };
+		1770A41E97AE4E3C8824EFE9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2718A5B2474147A0ADC938AA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngwio.c; path = pngwio.c; sourceTree = SOURCE_ROOT; };
+		28EB3F1BE6A943C8A7054583 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngpread.c; path = pngpread.c; sourceTree = SOURCE_ROOT; };
+		374CFC66D8C640E0B8ED9AE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrtran.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngrtran.c; path = pngrtran.c; sourceTree = SOURCE_ROOT; };
+		3823AABC2F0049D7B8761D9F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = png.h; path = png.h; sourceTree = SOURCE_ROOT; };
+		41748C460A954915A2D6DCBD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwutil.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngwutil.c; path = pngwutil.c; sourceTree = SOURCE_ROOT; };
+		59226BA08197459591268FF2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrutil.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngrutil.c; path = pngrutil.c; sourceTree = SOURCE_ROOT; };
+		6944ACEA7F734D248DA03975 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = png.c; path = png.c; sourceTree = SOURCE_ROOT; };
+		6E2D24F88071448997B24FCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngmem.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngmem.c; path = pngmem.c; sourceTree = SOURCE_ROOT; };
+		7261540F536440B38507A937 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngdebug.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngdebug.h; path = pngdebug.h; sourceTree = SOURCE_ROOT; };
+		7596B153FA5E4A01A3EA5D75 /* libpng */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibpng.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		831BC3E61C07435F8A04792A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwrite.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngwrite.c; path = pngwrite.c; sourceTree = SOURCE_ROOT; };
+		86F3A02A264C4FDBBBB16609 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngread.c; path = pngread.c; sourceTree = SOURCE_ROOT; };
+		A90DA254CF204FF19D2B9820 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngset.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngset.c; path = pngset.c; sourceTree = SOURCE_ROOT; };
+		AD5D17EA465B4C71B4AE0CE2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwtran.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngwtran.c; path = pngwtran.c; sourceTree = SOURCE_ROOT; };
+		AECB1AE1C85145C7BFC510D4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngtrans.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngtrans.c; path = pngtrans.c; sourceTree = SOURCE_ROOT; };
+		BAFA704771424E5184F3B1BE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngerror.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngerror.c; path = pngerror.c; sourceTree = SOURCE_ROOT; };
+		DC8BC1238E7945CAAFAA96C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngconf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngconf.h; path = pngconf.h; sourceTree = SOURCE_ROOT; };
+		DE55FDFB87324150B2ECDA9E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpriv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngpriv.h; path = pngpriv.h; sourceTree = SOURCE_ROOT; };
+		DEEB6791E3B74D6F8BBD3882 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngrio.c; path = pngrio.c; sourceTree = SOURCE_ROOT; };
+		E48EA256F01B43DFA1C7E4D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnglibconf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pnglibconf.h; path = pnglibconf.h; sourceTree = SOURCE_ROOT; };
+		E6888A7AF0F6455C8DD279F5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngstruct.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pngstruct.h; path = pngstruct.h; sourceTree = SOURCE_ROOT; };
+		EEEC021C74CA4759A2941278 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngget.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pngget.c; path = pngget.c; sourceTree = SOURCE_ROOT; };
+		F0419863893549EBBB4177A4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FB0759EEAAFF418C89F7485A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		03486A72648B4D0193179E04 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F5FA912E06544E40A7B00B49 /* CMake Rules */,
+				1770A41E97AE4E3C8824EFE9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		498FFB400F994A85950216DC /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				5228900D6CF34CAD80C99BB6 /* CMake Rules */,
+				FB0759EEAAFF418C89F7485A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		5228900D6CF34CAD80C99BB6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		5CA761157AF84ACDA554508B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				6944ACEA7F734D248DA03975 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.c */,
+				BAFA704771424E5184F3B1BE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngerror.c */,
+				EEEC021C74CA4759A2941278 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngget.c */,
+				6E2D24F88071448997B24FCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngmem.c */,
+				28EB3F1BE6A943C8A7054583 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpread.c */,
+				86F3A02A264C4FDBBBB16609 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngread.c */,
+				DEEB6791E3B74D6F8BBD3882 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrio.c */,
+				374CFC66D8C640E0B8ED9AE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrtran.c */,
+				59226BA08197459591268FF2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrutil.c */,
+				A90DA254CF204FF19D2B9820 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngset.c */,
+				AECB1AE1C85145C7BFC510D4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngtrans.c */,
+				2718A5B2474147A0ADC938AA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwio.c */,
+				831BC3E61C07435F8A04792A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwrite.c */,
+				AD5D17EA465B4C71B4AE0CE2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwtran.c */,
+				41748C460A954915A2D6DCBD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwutil.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		81DB17EF21C04F489FB4BC27 /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				C64277DF1C494729923D5466 /* libpng */,
+			);
+			name = 3rdparty;
+			sourceTree = "<group>";
+		};
+		9232C821346B484FB9B81B74 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				498FFB400F994A85950216DC /* ZERO_CHECK */,
+				03486A72648B4D0193179E04 /* ALL_BUILD */,
+				81DB17EF21C04F489FB4BC27 /* 3rdparty */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		AF602DD9217A42A2B39D5A35 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				3823AABC2F0049D7B8761D9F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.h */,
+				DC8BC1238E7945CAAFAA96C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngconf.h */,
+				7261540F536440B38507A937 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngdebug.h */,
+				0452F2ECE2F24C26B1463C72 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnginfo.h */,
+				E48EA256F01B43DFA1C7E4D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pnglibconf.h */,
+				DE55FDFB87324150B2ECDA9E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpriv.h */,
+				E6888A7AF0F6455C8DD279F5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngstruct.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B62AE46E90DF4AC5BBB86181 = {
+			isa = PBXGroup;
+			children = (
+				9232C821346B484FB9B81B74 /* Sources */,
+				BE0705EECCD243EC8C3CD1BA /* Resources */,
+				B6DC08C1FA24495D960E44E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6DC08C1FA24495D960E44E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7596B153FA5E4A01A3EA5D75 /* libpng */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE0705EECCD243EC8C3CD1BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C64277DF1C494729923D5466 /* libpng */ = {
+			isa = PBXGroup;
+			children = (
+				5CA761157AF84ACDA554508B /* Source Files */,
+				AF602DD9217A42A2B39D5A35 /* Header Files */,
+				F0419863893549EBBB4177A4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/CMakeLists.txt */,
+			);
+			name = libpng;
+			sourceTree = "<group>";
+		};
+		F5FA912E06544E40A7B00B49 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D814E0EF25F494091CF68ED /* libpng */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 284638E907D14B2889D77497 /* Build configuration list for PBXNativeTarget "libpng" */;
+			buildPhases = (
+				B74F74ED4D784D38AD1DE684 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23C3F50769754602B44BF072 /* PBXTargetDependency */,
+			);
+			name = libpng;
+			productName = libpng;
+			productReference = 7596B153FA5E4A01A3EA5D75 /* libpng */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C282813FE134042AD8EBDE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = C0DA9C91BAA84CF382EEBC04 /* Build configuration list for PBXProject "libpng" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				394C159C56114C91A9A2E976 /* Debug */,
+				2EAC4E563D62411FAF8F0899 /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = B62AE46E90DF4AC5BBB86181;
+			projectDirPath = /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng;
+			projectRoot = "";
+			targets = (
+				0ED674C5E94940899768FC7C /* ALL_BUILD */,
+				995AA054170D436593FF856E /* RUN_TESTS */,
+				33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */,
+				2F57837EA08047B69490775B /* install */,
+				8D814E0EF25F494091CF68ED /* libpng */,
+				3F08C5B41DE94A65AC2D1481 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09DB7250D16E4BF08369A0D5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		193ECAEAC8024EE7B8CA798A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1D5A911F825D4EE989BF03B8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1E07FBF7EE5A4BD6B80A59CA = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		36B84AF3591D490C9ECCD511 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		551EAAFB64784C8DB115A68E /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7255D9F44C804A9F9EF96B56 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		80A0B5602514449FA34BC433 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9914E9F47C224B2D9626CF3C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AB9DEA38A90E4C4DBEFF9F29 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B74F74ED4D784D38AD1DE684 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79471A07418240DA80600C2E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/png.c */,
+				BEAFB6A4C3EA409BB957C5AB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngerror.c */,
+				5C5CF013DD50442CA74FDE32 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngget.c */,
+				3E622E1E8CCE4BAF9E24E93D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngmem.c */,
+				019D9FE4517C40E994F575F6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngpread.c */,
+				547750A6A1864906869927DC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngread.c */,
+				00049EAC88DB444CB02DD76A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrio.c */,
+				D4405FE4B3854C94B91CA5AC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrtran.c */,
+				F383277213AD410A98081BCB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngrutil.c */,
+				E01CC7F690584B56B5BF8B5F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngset.c */,
+				E45D2D2463CD4FC684E79CF3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngtrans.c */,
+				260990EA646D4CD48345CC17 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwio.c */,
+				6C05E256E586443C9EA1E9EA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwrite.c */,
+				654546AB7D3145DB97F4F6C2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwtran.c */,
+				DE99F02223D44AB3B3E664EA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng/pngwutil.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23C3F50769754602B44BF072 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = A055D5DCEA584A92A65850EE /* PBXContainerItemProxy */;
+		};
+		56B3B24AD39B4B1C9DEC9315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D814E0EF25F494091CF68ED /* libpng */;
+			targetProxy = 2ED2D4DD8FED4EEE90C1D46B /* PBXContainerItemProxy */;
+		};
+		A48F3593EC3345518230850C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = B0442F608FC64EEAA9BB6A33 /* PBXContainerItemProxy */;
+		};
+		CB3C754038C54AB994143C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = 6DD52CFEDC034138BE14997D /* PBXContainerItemProxy */;
+		};
+		D530A8C1C62242E4BF82EBB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = 185C75A3E0E74D62B63A0083 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AE36AC47B284E9E94FDA12F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC         -DDEBUG -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libpng;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		14F24984A77047F38D71B01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		220B9A0E64054F2BA944A332 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		2EACA4FC905E463FB9DCB958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		36D407A701724795A15A2D3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		4A96084CE74B495392098FE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/build";
+			};
+			name = Debug;
+		};
+		667D83039BCF4D26B1CD4EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		6BF8F64A854D4851A1361BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC     -DNDEBUG  -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libpng;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		8918D426840144299C5A94CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		939860CA1FAE43B1899596B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		9AD57681346A41CE92133FC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		B5659BB163754CAA88F10E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", PNG_CONFIGURE_LIBPNG, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		B5900923B85942D1A369AA3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libpng, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		E70B2B567D9B4E1F8AB442A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libpng/build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		027F1CCC850E4382942D7AB7 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8918D426840144299C5A94CB /* Debug */,
+				220B9A0E64054F2BA944A332 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		284638E907D14B2889D77497 /* Build configuration list for PBXNativeTarget "libpng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AE36AC47B284E9E94FDA12F /* Debug */,
+				6BF8F64A854D4851A1361BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3C89B5BFC6934303A59175F6 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667D83039BCF4D26B1CD4EB8 /* Debug */,
+				939860CA1FAE43B1899596B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		89D73205DB854BE180A41418 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F24984A77047F38D71B01F /* Debug */,
+				2EACA4FC905E463FB9DCB958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B0DC6E60F0FF46C5BB09B523 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AD57681346A41CE92133FC4 /* Debug */,
+				B5900923B85942D1A369AA3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C0DA9C91BAA84CF382EEBC04 /* Build configuration list for PBXProject "libpng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A96084CE74B495392098FE4 /* Debug */,
+				E70B2B567D9B4E1F8AB442A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C266AF5868AF4FFBA0A11B78 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D407A701724795A15A2D3B /* Debug */,
+				B5659BB163754CAA88F10E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C282813FE134042AD8EBDE2 /* Project object */;
+}

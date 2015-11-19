@@ -65,8 +65,32 @@
 {
     self->loadedImageView.image = image;
     [self dismissModalViewControllerAnimated:YES];
+    
+    [self overlayLoadedImage:image];
 }
 
+- (void) overlayLoadedImage: (UIImage *)loadedImage;
+{
+    // Convert from UIImage to CV Mat
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(loadedImage.CGImage);
+    CGFloat cols = loadedImage.size.width;
+    CGFloat rows = loadedImage.size.height;
+    
+    cv::Mat cvMat(rows, cols, CV_8UC4);                                 // 8 bits per component, 4 channels
+    
+    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to backing data
+                                                    cols,                      // Width of bitmap
+                                                    rows,                     // Height of bitmap
+                                                    8,                          // Bits per component
+                                                    cvMat.step[0],              // Bytes per row
+                                                    colorSpace,                 // Colorspace
+                                                    kCGImageAlphaNoneSkipLast |
+                                                    kCGBitmapByteOrderDefault); // Bitmap info flags
+    
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), loadedImage.CGImage);
+    CGContextRelease(contextRef);
+
+}
 
 #pragma mark - Protocol CvVideoCameraDelegate
 

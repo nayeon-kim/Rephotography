@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/calib3d/src/stereobm.cpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/calib3d/src/precomp.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/calib3d/include/opencv2/calib3d.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/cvdef.h \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/hal/include/opencv2/hal/defs.h \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/version.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/base.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/cvstd.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/ptr.inl.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/hal/include/opencv2/hal.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/sse_utils.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/traits.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/matx.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/types.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/mat.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/bufferpool.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/mat.inl.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/persistence.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/operations.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/cvstd.inl.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/utility.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/optim.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/features2d/include/opencv2/features2d.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/flann/include/opencv2/flann/miniflann.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/flann/include/opencv2/flann/defines.h \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/flann/include/opencv2/flann/config.h \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/affine.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/imgproc/include/opencv2/imgproc.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/private.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/cvconfig.h \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/ocl.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/modules/world/opencl_kernels_calib3d.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/ocl_genbase.hpp \
+  /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/modules/core/include/opencv2/core/opencl/ocl_defs.hpp

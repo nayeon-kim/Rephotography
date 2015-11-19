@@ -49,11 +49,18 @@ def build_opencv(srcroot, buildroot, target, arch):
     currdir = os.getcwd()
     os.chdir(builddir)
     # for some reason, if you do not specify CMAKE_BUILD_TYPE, it puts libs to "RELEASE" rather than "Release"
+#    cmakeargs = ("-GXcode " +
+#                "-DCMAKE_BUILD_TYPE=Release " +
+#                "-DCMAKE_TOOLCHAIN_FILE=%s/platforms/ios/cmake/Toolchains/Toolchain-%s_Xcode.cmake " +
+#                "-DCMAKE_C_FLAGS=\"-Wno-implicit-function-declaration\" " +
+#                "-DCMAKE_INSTALL_PREFIX=install") % (srcroot, target)
+
     cmakeargs = ("-GXcode " +
-                "-DCMAKE_BUILD_TYPE=Release " +
-                "-DCMAKE_TOOLCHAIN_FILE=%s/platforms/ios/cmake/Toolchains/Toolchain-%s_Xcode.cmake " +
-                "-DCMAKE_C_FLAGS=\"-Wno-implicit-function-declaration\" " +
-                "-DCMAKE_INSTALL_PREFIX=install") % (srcroot, target)
+                 "-DPYTHON_EXECUTABLE=/usr/bin/python " +
+                 "-DCMAKE_BUILD_TYPE=Release " +
+                 "-DCMAKE_TOOLCHAIN_FILE=%s/ios/cmake/Toolchains/Toolchain-%s_Xcode.cmake" +
+#                 "-DBUILD_opencv_world=ON " +
+                 "-DCMAKE_INSTALL_PREFIX=install") % (srcroot, target)
 
     if arch.startswith("armv"):
         cmakeargs += " -DENABLE_NEON=ON"

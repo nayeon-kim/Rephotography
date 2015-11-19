@@ -1,0 +1,1037 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0ED674C5E94940899768FC7C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 41A700DEC1694C03B4F8FF79 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				3B23FB977272414B829FB492 /* CMake Rules */,
+			);
+			dependencies = (
+				F9CAB1382CFD497AA8BFC357 /* PBXTargetDependency */,
+				F2E7B43DACCE49A0BBE7AF7F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		2F57837EA08047B69490775B /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4AEF93A6A3144322A2731C3F /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				170ABD683C4A4988AB6C7179 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				A4594D8570F0440C914C1685 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CB04F32078E543FEB2D7F3BD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F5C85E28335344239009E47A /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		3F08C5B41DE94A65AC2D1481 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 83272CF6014E44D48A32044B /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				18A99E6879A34A6C8D565421 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				01B9B1250E434C6B88A784E5 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		995AA054170D436593FF856E /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1985C2FA79DA40F58151AB29 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				24198238170841EF9B28617B /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		064923B56AD44B6F97CA56DF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatadst.c */ = {isa = PBXBuildFile; fileRef = 40E7646B6355431CA9857388 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatadst.c */; settings = {COMPILER_FLAGS = ""; }; };
+		0A9269E2E9EE4DD58FD93DAB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmaster.c */ = {isa = PBXBuildFile; fileRef = 7827C15A171341DBA6B53D59 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmaster.c */; settings = {COMPILER_FLAGS = ""; }; };
+		11C51790A8534A6EAD2886FE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctint.c */ = {isa = PBXBuildFile; fileRef = 6DD04A81AFBD410693CA869F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctint.c */; settings = {COMPILER_FLAGS = ""; }; };
+		11D07B44BD6C44AC8FD0C7D0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcoefct.c */ = {isa = PBXBuildFile; fileRef = 28A79756AD2842F88F66909C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcoefct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		151BEE8BD2754AB2862D06E8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccoefct.c */ = {isa = PBXBuildFile; fileRef = BF4E225474CD44009A4C4876 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccoefct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1B8B878FC4D84067A66AC747 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdarith.c */ = {isa = PBXBuildFile; fileRef = E4D9AF7456FE45C495C5E43C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdarith.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1BDEA0E5DD49482FB21F0342 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcdctmgr.c */ = {isa = PBXBuildFile; fileRef = DDAF846E821745B3900C70A0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcdctmgr.c */; settings = {COMPILER_FLAGS = "-O1"; }; };
+		20BCDF2F1E8E426F8E1264B7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcsample.c */ = {isa = PBXBuildFile; fileRef = 287E8B3E32144FECA373FC16 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcsample.c */; settings = {COMPILER_FLAGS = ""; }; };
+		2400C5380F8E448CA53E69A4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jversion.h */ = {isa = PBXBuildFile; fileRef = 50FBEF97CF334362A464CA24 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jversion.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2B074E90AC254B399856426F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmerge.c */ = {isa = PBXBuildFile; fileRef = 2109C1D21C6F48C189A0AE2F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmerge.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3588322ECCD74AA288322D72 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant2.c */ = {isa = PBXBuildFile; fileRef = F4C4F43BD60847F3B38C34C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant2.c */; settings = {COMPILER_FLAGS = ""; }; };
+		35BC3C710BF04D48A19F00D2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant1.c */ = {isa = PBXBuildFile; fileRef = B2A857AD92084667A632F944 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant1.c */; settings = {COMPILER_FLAGS = ""; }; };
+		39A6B3DBEE534368AF704AE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcprepct.c */ = {isa = PBXBuildFile; fileRef = B891663A461C4513B7CB1EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcprepct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3E7CA794398F4666BE123098 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctflt.c */ = {isa = PBXBuildFile; fileRef = 4C636F03D9BA47B3856FFDCF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctflt.c */; settings = {COMPILER_FLAGS = ""; }; };
+		42B4A141073E42AB9E6F9038 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jchuff.c */ = {isa = PBXBuildFile; fileRef = 0D2885447F1E46EEB2B11158 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jchuff.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4A18C60873644DD5AB947BFD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapistd.c */ = {isa = PBXBuildFile; fileRef = E9089CCAD57C40379C296840 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapistd.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4AD7505BED454DA892F9B1EC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapimin.c */ = {isa = PBXBuildFile; fileRef = E4724C22915D4D04B0022FA7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapimin.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4E9128BA97234D8ABE133798 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemmgr.c */ = {isa = PBXBuildFile; fileRef = 7469FDEF53E448388A8BE4A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemmgr.c */; settings = {COMPILER_FLAGS = ""; }; };
+		562793EAF2C24E5C9528DE21 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdtrans.c */ = {isa = PBXBuildFile; fileRef = 4EE56E9C4FB84AAAA27BB23C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdtrans.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6140FB0C26534FF7915A61EA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdct.h */ = {isa = PBXBuildFile; fileRef = D9AF2E5EDC6248D79325DFDF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdct.h */; settings = {COMPILER_FLAGS = ""; }; };
+		628A762F45FB466299B5C862 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapistd.c */ = {isa = PBXBuildFile; fileRef = AE428A2215CD4AF69898EC8D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapistd.c */; settings = {COMPILER_FLAGS = ""; }; };
+		64BCD702BC564A0B83DFC75F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpeglib.h */ = {isa = PBXBuildFile; fileRef = 9AE7D6E1155247C4BC1E5A5D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpeglib.h */; settings = {COMPILER_FLAGS = ""; }; };
+		683364FF286F40B78BE9A7CE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdinput.c */ = {isa = PBXBuildFile; fileRef = B3CFB1D52ECF4D3DBD1CB152 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdinput.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6EA832A124D24474AF6ABCA3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jddctmgr.c */ = {isa = PBXBuildFile; fileRef = 6E8BC63F3B4F4B31B5ED2EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jddctmgr.c */; settings = {COMPILER_FLAGS = ""; }; };
+		763A4E9773B8433EA023FE86 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpegint.h */ = {isa = PBXBuildFile; fileRef = 422E4E9EBE9F468C85CA93B6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpegint.h */; settings = {COMPILER_FLAGS = ""; }; };
+		79C692FB43134EBB925A35F7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctflt.c */ = {isa = PBXBuildFile; fileRef = 2DC22E3DA1BB470CB6305789 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctflt.c */; settings = {COMPILER_FLAGS = ""; }; };
+		856C954C8B314A2184234806 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcomapi.c */ = {isa = PBXBuildFile; fileRef = 65FFC6CB2F704F88AABAD1D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcomapi.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8611E887BDFD40A48D670349 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemsys.h */ = {isa = PBXBuildFile; fileRef = BCDD4F3EC90F4CD39C8E88F8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemsys.h */; settings = {COMPILER_FLAGS = ""; }; };
+		86A53E079588407196AAC360 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmainct.c */ = {isa = PBXBuildFile; fileRef = DF74623236AD43D7AD4353EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmainct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8B8C9B7ED70F44CEA1CFA992 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctint.c */ = {isa = PBXBuildFile; fileRef = 1806BE5B180046DB9F03DDB0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctint.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8D55C325C9964CC89EA1C202 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmarker.c */ = {isa = PBXBuildFile; fileRef = 4B054B4E7A124538B10F2424 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmarker.c */; settings = {COMPILER_FLAGS = ""; }; };
+		937A681AD767406E9E88FF53 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemnobs.c */ = {isa = PBXBuildFile; fileRef = 10D0B81A61524BF2B6607817 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemnobs.c */; settings = {COMPILER_FLAGS = ""; }; };
+		98DAD57AA1264B59B5785E0D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmainct.c */ = {isa = PBXBuildFile; fileRef = 7B39A211947A4677A0F23693 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmainct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		9A4146883C794A6E82CBBEE3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmaster.c */ = {isa = PBXBuildFile; fileRef = E197F8D1E6164AD5BBF3BB73 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmaster.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A5251457E06A4E1FB166D3D5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jctrans.c */ = {isa = PBXBuildFile; fileRef = 80577CE2DFE44E67966D2C61 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jctrans.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A58F4A971A184139A91B1176 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcinit.c */ = {isa = PBXBuildFile; fileRef = E74653FDD7E04C969E146ECB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcinit.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AB14C5BAADF944AD95DD7113 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmarker.c */ = {isa = PBXBuildFile; fileRef = 8783133F07A5425283601110 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmarker.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AB218F5D9D734D1E844F26D8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.c */ = {isa = PBXBuildFile; fileRef = B24013055BEB473186A895EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AC9C1F81F45443A180B42747 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcolor.c */ = {isa = PBXBuildFile; fileRef = 7E762A9C61CC44C3AB9A5F54 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcolor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B64630A6E58C4B94ADEDF3D1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatasrc.c */ = {isa = PBXBuildFile; fileRef = 2308E6FB7BC142FB8C9DF011 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatasrc.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C3BFBAAB62924751B6E374B0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctfst.c */ = {isa = PBXBuildFile; fileRef = 2F1A6FFEDCFF48A2B05E855A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctfst.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D5938710E7514F6881A9C8E5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccolor.c */ = {isa = PBXBuildFile; fileRef = 045A89C3CCCE4341AB8DFE14 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccolor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D75E86DEFA5E4A119DC87BC4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapimin.c */ = {isa = PBXBuildFile; fileRef = CE384154CB3D4C67AA81D61F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapimin.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D8CA3C21C2704A02B3B42C2F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8323EACA177F484D8B3987C7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		D90641ED2BC749CF90EAE14F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jaricom.c */ = {isa = PBXBuildFile; fileRef = 1E28902767CC4D7CBD8B410A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jaricom.c */; settings = {COMPILER_FLAGS = ""; }; };
+		DADD91AB2C03450E8DADE213 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.h */ = {isa = PBXBuildFile; fileRef = 9B58C8D2E7204023917F5F7E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.h */; settings = {COMPILER_FLAGS = ""; }; };
+		DCE02CB19EB04F79AEF061C6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcparam.c */ = {isa = PBXBuildFile; fileRef = 486550C5784B445D874BDE56 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcparam.c */; settings = {COMPILER_FLAGS = ""; }; };
+		DD676F6ABFD540F2A67A09AE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdpostct.c */ = {isa = PBXBuildFile; fileRef = 2596354F5F334722913AA369 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdpostct.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E56DD7B60443484DB7A0672D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctfst.c */ = {isa = PBXBuildFile; fileRef = 186D1B349E8A4F5D8A547A20 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctfst.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E831C9ADEBC2428EAD7A4598 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmorecfg.h */ = {isa = PBXBuildFile; fileRef = 8DBDFDCCEA09456DADFA78A3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmorecfg.h */; settings = {COMPILER_FLAGS = ""; }; };
+		E922E364D9044878A7B955AA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jinclude.h */ = {isa = PBXBuildFile; fileRef = DDA5E43E669B4978A2169CCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jinclude.h */; settings = {COMPILER_FLAGS = ""; }; };
+		E98370F310B2425E974DBFDA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jconfig.h */ = {isa = PBXBuildFile; fileRef = 56907B5C5344454099E37CFB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jconfig.h */; settings = {COMPILER_FLAGS = ""; }; };
+		ED54647FE57C42C8ACA679AC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdsample.c */ = {isa = PBXBuildFile; fileRef = 01C99D780220404998EF6AA8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdsample.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F94C89EDFF4F4B0CBD5D9D7E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jutils.c */ = {isa = PBXBuildFile; fileRef = 2231818F9090491D83585B55 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jutils.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FC1600B6D1FA410082221298 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdhuff.c */ = {isa = PBXBuildFile; fileRef = 8FCD00CB535545CCA876C302 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdhuff.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FF44C3430D624CAF9F706DA8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcarith.c */ = {isa = PBXBuildFile; fileRef = 8EA241690E5D4064BCCF3E0D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcarith.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		8CE6F550F3544EA2AFF3F52F = {
+			isa = PBXBuildStyle;
+		};
+		D536AB7219A94795BF30E69E /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		FD6248B006E4451AA8A446E1 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		5B697047040A4BCAB474945B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5C582D5D43F4059B37F2F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+		7953667C6682458B97526A56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5C582D5D43F4059B37F2F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+		AE68BBA9C67E47F6966F16A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5C582D5D43F4059B37F2F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97D31F830353453482B698C2;
+			remoteInfo = libjpeg;
+		};
+		D1FE34DC143848FBB8B27B55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5C582D5D43F4059B37F2F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+		D828BF8381C345D8A5B626D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5C582D5D43F4059B37F2F08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C99D780220404998EF6AA8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdsample.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdsample.c; path = jdsample.c; sourceTree = SOURCE_ROOT; };
+		045A89C3CCCE4341AB8DFE14 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccolor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jccolor.c; path = jccolor.c; sourceTree = SOURCE_ROOT; };
+		0D2885447F1E46EEB2B11158 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jchuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jchuff.c; path = jchuff.c; sourceTree = SOURCE_ROOT; };
+		10D0B81A61524BF2B6607817 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemnobs.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jmemnobs.c; path = jmemnobs.c; sourceTree = SOURCE_ROOT; };
+		1806BE5B180046DB9F03DDB0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctint.c; path = jidctint.c; sourceTree = SOURCE_ROOT; };
+		186D1B349E8A4F5D8A547A20 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctfst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctfst.c; path = jfdctfst.c; sourceTree = SOURCE_ROOT; };
+		1E28902767CC4D7CBD8B410A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jaricom.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jaricom.c; path = jaricom.c; sourceTree = SOURCE_ROOT; };
+		1FB70FA390244860BE911A57 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2109C1D21C6F48C189A0AE2F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmerge.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmerge.c; path = jdmerge.c; sourceTree = SOURCE_ROOT; };
+		2231818F9090491D83585B55 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jutils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jutils.c; path = jutils.c; sourceTree = SOURCE_ROOT; };
+		2308E6FB7BC142FB8C9DF011 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatasrc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdatasrc.c; path = jdatasrc.c; sourceTree = SOURCE_ROOT; };
+		2596354F5F334722913AA369 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdpostct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdpostct.c; path = jdpostct.c; sourceTree = SOURCE_ROOT; };
+		287E8B3E32144FECA373FC16 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcsample.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcsample.c; path = jcsample.c; sourceTree = SOURCE_ROOT; };
+		28A79756AD2842F88F66909C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcoefct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdcoefct.c; path = jdcoefct.c; sourceTree = SOURCE_ROOT; };
+		2DC22E3DA1BB470CB6305789 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctflt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctflt.c; path = jidctflt.c; sourceTree = SOURCE_ROOT; };
+		2F1A6FFEDCFF48A2B05E855A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctfst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jidctfst.c; path = jidctfst.c; sourceTree = SOURCE_ROOT; };
+		40E7646B6355431CA9857388 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatadst.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdatadst.c; path = jdatadst.c; sourceTree = SOURCE_ROOT; };
+		422E4E9EBE9F468C85CA93B6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpegint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jpegint.h; path = jpegint.h; sourceTree = SOURCE_ROOT; };
+		486550C5784B445D874BDE56 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcparam.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcparam.c; path = jcparam.c; sourceTree = SOURCE_ROOT; };
+		4B054B4E7A124538B10F2424 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmarker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmarker.c; path = jdmarker.c; sourceTree = SOURCE_ROOT; };
+		4C636F03D9BA47B3856FFDCF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctflt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctflt.c; path = jfdctflt.c; sourceTree = SOURCE_ROOT; };
+		4EE56E9C4FB84AAAA27BB23C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdtrans.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdtrans.c; path = jdtrans.c; sourceTree = SOURCE_ROOT; };
+		50FBEF97CF334362A464CA24 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jversion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jversion.h; path = jversion.h; sourceTree = SOURCE_ROOT; };
+		56907B5C5344454099E37CFB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jconfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jconfig.h; path = jconfig.h; sourceTree = SOURCE_ROOT; };
+		65FFC6CB2F704F88AABAD1D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcomapi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcomapi.c; path = jcomapi.c; sourceTree = SOURCE_ROOT; };
+		6DD04A81AFBD410693CA869F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctint.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jfdctint.c; path = jfdctint.c; sourceTree = SOURCE_ROOT; };
+		6E8BC63F3B4F4B31B5ED2EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jddctmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jddctmgr.c; path = jddctmgr.c; sourceTree = SOURCE_ROOT; };
+		7469FDEF53E448388A8BE4A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jmemmgr.c; path = jmemmgr.c; sourceTree = SOURCE_ROOT; };
+		75D704AC2676414FB525181B /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7827C15A171341DBA6B53D59 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmaster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmaster.c; path = jdmaster.c; sourceTree = SOURCE_ROOT; };
+		7B39A211947A4677A0F23693 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmainct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdmainct.c; path = jdmainct.c; sourceTree = SOURCE_ROOT; };
+		7E762A9C61CC44C3AB9A5F54 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcolor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdcolor.c; path = jdcolor.c; sourceTree = SOURCE_ROOT; };
+		80577CE2DFE44E67966D2C61 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jctrans.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jctrans.c; path = jctrans.c; sourceTree = SOURCE_ROOT; };
+		8323EACA177F484D8B3987C7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8783133F07A5425283601110 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmarker.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmarker.c; path = jcmarker.c; sourceTree = SOURCE_ROOT; };
+		8DBDFDCCEA09456DADFA78A3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmorecfg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jmorecfg.h; path = jmorecfg.h; sourceTree = SOURCE_ROOT; };
+		8EA241690E5D4064BCCF3E0D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcarith.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcarith.c; path = jcarith.c; sourceTree = SOURCE_ROOT; };
+		8FCD00CB535545CCA876C302 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdhuff.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdhuff.c; path = jdhuff.c; sourceTree = SOURCE_ROOT; };
+		9AE7D6E1155247C4BC1E5A5D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpeglib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jpeglib.h; path = jpeglib.h; sourceTree = SOURCE_ROOT; };
+		9B58C8D2E7204023917F5F7E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jerror.h; path = jerror.h; sourceTree = SOURCE_ROOT; };
+		AAED7C632689447B9F5A9FBC /* libjpeg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibjpeg.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE428A2215CD4AF69898EC8D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapistd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcapistd.c; path = jcapistd.c; sourceTree = SOURCE_ROOT; };
+		B24013055BEB473186A895EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jerror.c; path = jerror.c; sourceTree = SOURCE_ROOT; };
+		B2A857AD92084667A632F944 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant1.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jquant1.c; path = jquant1.c; sourceTree = SOURCE_ROOT; };
+		B3CFB1D52ECF4D3DBD1CB152 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdinput.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdinput.c; path = jdinput.c; sourceTree = SOURCE_ROOT; };
+		B891663A461C4513B7CB1EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcprepct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcprepct.c; path = jcprepct.c; sourceTree = SOURCE_ROOT; };
+		BCDD4F3EC90F4CD39C8E88F8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemsys.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jmemsys.h; path = jmemsys.h; sourceTree = SOURCE_ROOT; };
+		BF4E225474CD44009A4C4876 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccoefct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jccoefct.c; path = jccoefct.c; sourceTree = SOURCE_ROOT; };
+		CE384154CB3D4C67AA81D61F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapimin.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdapimin.c; path = jdapimin.c; sourceTree = SOURCE_ROOT; };
+		D9AF2E5EDC6248D79325DFDF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdct.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jdct.h; path = jdct.h; sourceTree = SOURCE_ROOT; };
+		DDA5E43E669B4978A2169CCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jinclude.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = jinclude.h; path = jinclude.h; sourceTree = SOURCE_ROOT; };
+		DDAF846E821745B3900C70A0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcdctmgr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcdctmgr.c; path = jcdctmgr.c; sourceTree = SOURCE_ROOT; };
+		DF74623236AD43D7AD4353EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmainct.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmainct.c; path = jcmainct.c; sourceTree = SOURCE_ROOT; };
+		E197F8D1E6164AD5BBF3BB73 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmaster.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcmaster.c; path = jcmaster.c; sourceTree = SOURCE_ROOT; };
+		E4724C22915D4D04B0022FA7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapimin.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcapimin.c; path = jcapimin.c; sourceTree = SOURCE_ROOT; };
+		E4D9AF7456FE45C495C5E43C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdarith.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdarith.c; path = jdarith.c; sourceTree = SOURCE_ROOT; };
+		E74653FDD7E04C969E146ECB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcinit.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jcinit.c; path = jcinit.c; sourceTree = SOURCE_ROOT; };
+		E9089CCAD57C40379C296840 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapistd.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jdapistd.c; path = jdapistd.c; sourceTree = SOURCE_ROOT; };
+		F4C4F43BD60847F3B38C34C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = jquant2.c; path = jquant2.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		261C62F4CF6943B391D87343 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				56907B5C5344454099E37CFB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jconfig.h */,
+				D9AF2E5EDC6248D79325DFDF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdct.h */,
+				9B58C8D2E7204023917F5F7E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.h */,
+				DDA5E43E669B4978A2169CCD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jinclude.h */,
+				BCDD4F3EC90F4CD39C8E88F8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemsys.h */,
+				8DBDFDCCEA09456DADFA78A3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmorecfg.h */,
+				422E4E9EBE9F468C85CA93B6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpegint.h */,
+				9AE7D6E1155247C4BC1E5A5D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jpeglib.h */,
+				50FBEF97CF334362A464CA24 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jversion.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5561C0EC72834AAC91BE6310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAED7C632689447B9F5A9FBC /* libjpeg */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89CE4DB71F44493DB90596D5 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8C84C41E616542B58E1E4D39 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9CB323362C344E009CA31601 /* ZERO_CHECK */,
+				F97CC7F2C44C4A8B9EF982F6 /* ALL_BUILD */,
+				D4DCF40341434D78A82F5D2C /* 3rdparty */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		930065E51EEB4D86A6CF744A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9316A1122C4F4FE6A89FD700 /* libjpeg */ = {
+			isa = PBXGroup;
+			children = (
+				E370FA5BCD4942CBAF463698 /* Source Files */,
+				261C62F4CF6943B391D87343 /* Header Files */,
+				8323EACA177F484D8B3987C7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */,
+			);
+			name = libjpeg;
+			sourceTree = "<group>";
+		};
+		9CB323362C344E009CA31601 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				89CE4DB71F44493DB90596D5 /* CMake Rules */,
+				1FB70FA390244860BE911A57 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		D0414C5CF81243E19D7F61F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D4DCF40341434D78A82F5D2C /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				9316A1122C4F4FE6A89FD700 /* libjpeg */,
+			);
+			name = 3rdparty;
+			sourceTree = "<group>";
+		};
+		D6A7B75910D54E84B8FB0EFC = {
+			isa = PBXGroup;
+			children = (
+				8C84C41E616542B58E1E4D39 /* Sources */,
+				D0414C5CF81243E19D7F61F0 /* Resources */,
+				5561C0EC72834AAC91BE6310 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E370FA5BCD4942CBAF463698 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E28902767CC4D7CBD8B410A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jaricom.c */,
+				E4724C22915D4D04B0022FA7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapimin.c */,
+				AE428A2215CD4AF69898EC8D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapistd.c */,
+				8EA241690E5D4064BCCF3E0D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcarith.c */,
+				BF4E225474CD44009A4C4876 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccoefct.c */,
+				045A89C3CCCE4341AB8DFE14 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccolor.c */,
+				DDAF846E821745B3900C70A0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcdctmgr.c */,
+				0D2885447F1E46EEB2B11158 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jchuff.c */,
+				E74653FDD7E04C969E146ECB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcinit.c */,
+				DF74623236AD43D7AD4353EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmainct.c */,
+				8783133F07A5425283601110 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmarker.c */,
+				E197F8D1E6164AD5BBF3BB73 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmaster.c */,
+				65FFC6CB2F704F88AABAD1D3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcomapi.c */,
+				486550C5784B445D874BDE56 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcparam.c */,
+				B891663A461C4513B7CB1EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcprepct.c */,
+				287E8B3E32144FECA373FC16 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcsample.c */,
+				80577CE2DFE44E67966D2C61 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jctrans.c */,
+				CE384154CB3D4C67AA81D61F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapimin.c */,
+				E9089CCAD57C40379C296840 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapistd.c */,
+				E4D9AF7456FE45C495C5E43C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdarith.c */,
+				40E7646B6355431CA9857388 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatadst.c */,
+				2308E6FB7BC142FB8C9DF011 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatasrc.c */,
+				28A79756AD2842F88F66909C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcoefct.c */,
+				7E762A9C61CC44C3AB9A5F54 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcolor.c */,
+				6E8BC63F3B4F4B31B5ED2EAE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jddctmgr.c */,
+				8FCD00CB535545CCA876C302 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdhuff.c */,
+				B3CFB1D52ECF4D3DBD1CB152 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdinput.c */,
+				7B39A211947A4677A0F23693 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmainct.c */,
+				4B054B4E7A124538B10F2424 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmarker.c */,
+				7827C15A171341DBA6B53D59 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmaster.c */,
+				2109C1D21C6F48C189A0AE2F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmerge.c */,
+				2596354F5F334722913AA369 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdpostct.c */,
+				01C99D780220404998EF6AA8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdsample.c */,
+				4EE56E9C4FB84AAAA27BB23C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdtrans.c */,
+				B24013055BEB473186A895EE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.c */,
+				4C636F03D9BA47B3856FFDCF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctflt.c */,
+				186D1B349E8A4F5D8A547A20 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctfst.c */,
+				6DD04A81AFBD410693CA869F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctint.c */,
+				2DC22E3DA1BB470CB6305789 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctflt.c */,
+				2F1A6FFEDCFF48A2B05E855A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctfst.c */,
+				1806BE5B180046DB9F03DDB0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctint.c */,
+				7469FDEF53E448388A8BE4A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemmgr.c */,
+				10D0B81A61524BF2B6607817 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemnobs.c */,
+				B2A857AD92084667A632F944 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant1.c */,
+				F4C4F43BD60847F3B38C34C4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant2.c */,
+				2231818F9090491D83585B55 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jutils.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F97CC7F2C44C4A8B9EF982F6 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				930065E51EEB4D86A6CF744A /* CMake Rules */,
+				75D704AC2676414FB525181B /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97D31F830353453482B698C2 /* libjpeg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F018529251A4C8BBC0568F3 /* Build configuration list for PBXNativeTarget "libjpeg" */;
+			buildPhases = (
+				B01CD26ED6494654B5DBD945 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32B2ACBA59BF4C4A9F877BD4 /* PBXTargetDependency */,
+			);
+			name = libjpeg;
+			productName = libjpeg;
+			productReference = AAED7C632689447B9F5A9FBC /* libjpeg */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5C582D5D43F4059B37F2F08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 73B093A837B2498BB18C607C /* Build configuration list for PBXProject "libjpeg" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				FD6248B006E4451AA8A446E1 /* Debug */,
+				D536AB7219A94795BF30E69E /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D6A7B75910D54E84B8FB0EFC;
+			projectDirPath = /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg;
+			projectRoot = "";
+			targets = (
+				0ED674C5E94940899768FC7C /* ALL_BUILD */,
+				995AA054170D436593FF856E /* RUN_TESTS */,
+				33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */,
+				2F57837EA08047B69490775B /* install */,
+				97D31F830353453482B698C2 /* libjpeg */,
+				3F08C5B41DE94A65AC2D1481 /* package */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		170ABD683C4A4988AB6C7179 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		18A99E6879A34A6C8D565421 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		24198238170841EF9B28617B /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		37B98C3993534E62AFC53719 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3B23FB977272414B829FB492 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5B4F9AB83F1649138A6FFF08 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5EB51544A6D54B4892B29B72 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		74D1F5C89B874F1AB90475F5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D6CCAC9FC8F54451AE591B04 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F5C85E28335344239009E47A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B01CD26ED6494654B5DBD945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90641ED2BC749CF90EAE14F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jaricom.c */,
+				4AD7505BED454DA892F9B1EC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapimin.c */,
+				628A762F45FB466299B5C862 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcapistd.c */,
+				FF44C3430D624CAF9F706DA8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcarith.c */,
+				151BEE8BD2754AB2862D06E8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccoefct.c */,
+				D5938710E7514F6881A9C8E5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jccolor.c */,
+				1BDEA0E5DD49482FB21F0342 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcdctmgr.c */,
+				42B4A141073E42AB9E6F9038 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jchuff.c */,
+				A58F4A971A184139A91B1176 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcinit.c */,
+				86A53E079588407196AAC360 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmainct.c */,
+				AB14C5BAADF944AD95DD7113 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmarker.c */,
+				9A4146883C794A6E82CBBEE3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcmaster.c */,
+				856C954C8B314A2184234806 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcomapi.c */,
+				DCE02CB19EB04F79AEF061C6 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcparam.c */,
+				39A6B3DBEE534368AF704AE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcprepct.c */,
+				20BCDF2F1E8E426F8E1264B7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jcsample.c */,
+				A5251457E06A4E1FB166D3D5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jctrans.c */,
+				D75E86DEFA5E4A119DC87BC4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapimin.c */,
+				4A18C60873644DD5AB947BFD /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdapistd.c */,
+				1B8B878FC4D84067A66AC747 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdarith.c */,
+				064923B56AD44B6F97CA56DF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatadst.c */,
+				B64630A6E58C4B94ADEDF3D1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdatasrc.c */,
+				11D07B44BD6C44AC8FD0C7D0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcoefct.c */,
+				AC9C1F81F45443A180B42747 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdcolor.c */,
+				6EA832A124D24474AF6ABCA3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jddctmgr.c */,
+				FC1600B6D1FA410082221298 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdhuff.c */,
+				683364FF286F40B78BE9A7CE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdinput.c */,
+				98DAD57AA1264B59B5785E0D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmainct.c */,
+				8D55C325C9964CC89EA1C202 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmarker.c */,
+				0A9269E2E9EE4DD58FD93DAB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmaster.c */,
+				2B074E90AC254B399856426F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdmerge.c */,
+				DD676F6ABFD540F2A67A09AE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdpostct.c */,
+				ED54647FE57C42C8ACA679AC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdsample.c */,
+				562793EAF2C24E5C9528DE21 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jdtrans.c */,
+				AB218F5D9D734D1E844F26D8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jerror.c */,
+				3E7CA794398F4666BE123098 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctflt.c */,
+				E56DD7B60443484DB7A0672D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctfst.c */,
+				11C51790A8534A6EAD2886FE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jfdctint.c */,
+				79C692FB43134EBB925A35F7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctflt.c */,
+				C3BFBAAB62924751B6E374B0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctfst.c */,
+				8B8C9B7ED70F44CEA1CFA992 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jidctint.c */,
+				4E9128BA97234D8ABE133798 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemmgr.c */,
+				937A681AD767406E9E88FF53 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jmemnobs.c */,
+				35BC3C710BF04D48A19F00D2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant1.c */,
+				3588322ECCD74AA288322D72 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jquant2.c */,
+				F94C89EDFF4F4B0CBD5D9D7E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg/jutils.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01B9B1250E434C6B88A784E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = 7953667C6682458B97526A56 /* PBXContainerItemProxy */;
+		};
+		32B2ACBA59BF4C4A9F877BD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = 5B697047040A4BCAB474945B /* PBXContainerItemProxy */;
+		};
+		A4594D8570F0440C914C1685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = D828BF8381C345D8A5B626D9 /* PBXContainerItemProxy */;
+		};
+		F2E7B43DACCE49A0BBE7AF7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97D31F830353453482B698C2 /* libjpeg */;
+			targetProxy = AE68BBA9C67E47F6966F16A4 /* PBXContainerItemProxy */;
+		};
+		F9CAB1382CFD497AA8BFC357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = D1FE34DC143848FBB8B27B55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		103F2522B0A84BAA91A79B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		3659CD3013E54ADAA32C7AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC         -DDEBUG -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libjpeg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		64018CB361BC4502BF8FE0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/build";
+			};
+			name = Debug;
+		};
+		6A7E833AFF314B27B146C35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		94643716F9D34C2FBF441419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		C698F4321F694A0B8C7701D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		CD8CC30E1A53438A83E39C9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		CDBF9C49D48B42158C23B5D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC     -DNDEBUG  -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libjpeg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		D5A39EAAD8844A05B5472879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		D63C9FCFE55A4939A77FAF6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		E98D90FD4EB940D4BD2CB84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		EBD7B10D210D44728A85B266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		F13EA29DA56C4997A3FAC8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg/build";
+			};
+			name = Release;
+		};
+		FD62C37E4C0E4602B43BD097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/libjpeg, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/libjpeg";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1985C2FA79DA40F58151AB29 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				103F2522B0A84BAA91A79B8A /* Debug */,
+				E98D90FD4EB940D4BD2CB84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41A700DEC1694C03B4F8FF79 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94643716F9D34C2FBF441419 /* Debug */,
+				CD8CC30E1A53438A83E39C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4AEF93A6A3144322A2731C3F /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5A39EAAD8844A05B5472879 /* Debug */,
+				EBD7B10D210D44728A85B266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		73B093A837B2498BB18C607C /* Build configuration list for PBXProject "libjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64018CB361BC4502BF8FE0EF /* Debug */,
+				F13EA29DA56C4997A3FAC8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F018529251A4C8BBC0568F3 /* Build configuration list for PBXNativeTarget "libjpeg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3659CD3013E54ADAA32C7AAB /* Debug */,
+				CDBF9C49D48B42158C23B5D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		83272CF6014E44D48A32044B /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD62C37E4C0E4602B43BD097 /* Debug */,
+				D63C9FCFE55A4939A77FAF6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CB04F32078E543FEB2D7F3BD /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7E833AFF314B27B146C35F /* Debug */,
+				C698F4321F694A0B8C7701D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5C582D5D43F4059B37F2F08 /* Project object */;
+}

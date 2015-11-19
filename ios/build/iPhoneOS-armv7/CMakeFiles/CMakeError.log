@@ -1,0 +1,370 @@
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_6b325" "-configuration" "Debug"
+2015-11-01 17:33:54.865 xcodebuild[2177:1007] [MT] iPhoneSimulator: SimVerifier returned: Error Domain=NSPOSIXErrorDomain Code=53 "Simulator verification failed." UserInfo=0x7fc761693520 {NSLocalizedFailureReason=A connection to the simulator verification service could not be established., NSLocalizedRecoverySuggestion=Ensure that Xcode.app is installed on a volume with ownership enabled., NSLocalizedDescription=Simulator verification failed.}
+=== BUILD TARGET cmTC_6b325 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+
+Detecting CXX [-std=c++1y] compiler features failed to compile with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e5228" "-configuration" "Debug"
+2015-11-01 17:33:57.279 xcodebuild[2185:1007] [MT] iPhoneSimulator: SimVerifier returned: Error Domain=NSPOSIXErrorDomain Code=53 "Simulator verification failed." UserInfo=0x7f8c3d3fa0a0 {NSLocalizedFailureReason=A connection to the simulator verification service could not be established., NSLocalizedRecoverySuggestion=Ensure that Xcode.app is installed on a volume with ownership enabled., NSLocalizedDescription=Simulator verification failed.}
+=== BUILD TARGET cmTC_e5228 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_1cfca" "-configuration" "Debug"
+2015-11-01 17:33:59.682 xcodebuild[2194:1007] [MT] iPhoneSimulator: SimVerifier returned: Error Domain=NSPOSIXErrorDomain Code=53 "Simulator verification failed." UserInfo=0x7f9ed2f7e4a0 {NSLocalizedFailureReason=A connection to the simulator verification service could not be established., NSLocalizedRecoverySuggestion=Ensure that Xcode.app is installed on a volume with ownership enabled., NSLocalizedDescription=Simulator verification failed.}
+=== BUILD TARGET cmTC_1cfca OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_a420d" "-configuration" "Debug"
+2015-11-01 17:34:02.432 xcodebuild[2203:1007] [MT] iPhoneSimulator: SimVerifier returned: Error Domain=NSPOSIXErrorDomain Code=53 "Simulator verification failed." UserInfo=0x7f850342fe90 {NSLocalizedFailureReason=A connection to the simulator verification service could not be established., NSLocalizedRecoverySuggestion=Ensure that Xcode.app is installed on a volume with ownership enabled., NSLocalizedDescription=Simulator verification failed.}
+=== BUILD TARGET cmTC_a420d OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_87c9a" "-configuration" "Release"
+=== BUILD TARGET cmTC_87c9a OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_b1402" "-configuration" "Release"
+=== BUILD TARGET cmTC_b1402 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file sys/types.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_d28de" "-configuration" "Release"
+=== BUILD TARGET cmTC_d28de OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file stdint.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_11fbd" "-configuration" "Release"
+=== BUILD TARGET cmTC_11fbd OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file stddef.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_8c442" "-configuration" "Release"
+=== BUILD TARGET cmTC_8c442 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_7c0b6" "-configuration" "Release"
+=== BUILD TARGET cmTC_7c0b6 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CheckTypeSize/OFF64_T.c:
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_25a0b" "-configuration" "Release"
+=== BUILD TARGET cmTC_25a0b OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file linux/videodev2.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_c4add" "-configuration" "Release"
+=== BUILD TARGET cmTC_c4add OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_81c32" "-configuration" "Release"
+=== BUILD TARGET cmTC_81c32 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_b7419" "-configuration" "Release"
+=== BUILD TARGET cmTC_b7419 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file linux/videodev2.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_f58bc" "-configuration" "Release"
+=== BUILD TARGET cmTC_f58bc OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_8cb90" "-configuration" "Release"
+=== BUILD TARGET cmTC_8cb90 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e1542" "-configuration" "Release"
+=== BUILD TARGET cmTC_e1542 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file linux/videodev2.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_f9ef5" "-configuration" "Release"
+=== BUILD TARGET cmTC_f9ef5 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_d2107" "-configuration" "Release"
+=== BUILD TARGET cmTC_d2107 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Release ===
+
+Check dependencies
+target specifies product type 'com.apple.product-type.tool', but there's no such product type for the 'iphoneos' platform
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Check dependencies
+(1 failure)
+
+

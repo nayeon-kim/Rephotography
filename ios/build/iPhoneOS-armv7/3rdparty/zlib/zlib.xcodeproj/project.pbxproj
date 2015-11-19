@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0ED674C5E94940899768FC7C /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A7471D24370D478DA151DB92 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				25EDF059251B443CB7D6918A /* CMake Rules */,
+			);
+			dependencies = (
+				527637FB8A154547923A2492 /* PBXTargetDependency */,
+				97796046A98B4056B89A63EC /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		2F57837EA08047B69490775B /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D8DFFC02B4C143CDB3BAA0BE /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				9D9AD269789543FAB9298437 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				2CCA8FA51E584EDA992B192D /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 302FC753D2D540208E22928C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				8F876AB36AFE4B68AC93A900 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		3F08C5B41DE94A65AC2D1481 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 240E9AB3008640BB91DC8467 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				1D3D10BCB2444F18812438A4 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				9CE0617531E74885B877A96D /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		995AA054170D436593FF856E /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BEE30BE57EE748469D97589D /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				AA48AED68DD14D468146DC0E /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		005F0E0DA9AC4C5AB9503901 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzclose.c */ = {isa = PBXBuildFile; fileRef = D0377C0347574A679236F892 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzclose.c */; settings = {COMPILER_FLAGS = ""; }; };
+		04512398BAE54807B26F75A0 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzguts.h */ = {isa = PBXBuildFile; fileRef = 44AF0399B0C447F6B3340128 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzguts.h */; settings = {COMPILER_FLAGS = ""; }; };
+		1B56D9E1772E42DFB6FA3D00 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.h */ = {isa = PBXBuildFile; fileRef = FA2949DE109A441AA786F317 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.h */; settings = {COMPILER_FLAGS = ""; }; };
+		1C64675C579F45409E4BACEE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 28FCBF161A2A4DAB86D2BDC7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		1F7807AFEABD4667B57A1310 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/uncompr.c */ = {isa = PBXBuildFile; fileRef = B2289389A142431B9E094F94 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/uncompr.c */; settings = {COMPILER_FLAGS = ""; }; };
+		22BBFB20FDBC40A8A4724C2B /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzread.c */ = {isa = PBXBuildFile; fileRef = D40C0C14338A440D94F88720 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzread.c */; settings = {COMPILER_FLAGS = ""; }; };
+		337F51B158C248FC8A2BEAAB /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.h */ = {isa = PBXBuildFile; fileRef = 2173F8E2959D4E0D959EAF71 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.h */; settings = {COMPILER_FLAGS = ""; }; };
+		34C5F1F00E454942B7D5B3C9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.c */ = {isa = PBXBuildFile; fileRef = A3FC6BFA1E5B458B96EADC8C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.c */; settings = {COMPILER_FLAGS = ""; }; };
+		37B7AF48C9794FC18686A4F5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.c */ = {isa = PBXBuildFile; fileRef = C4A51BE5DBC44CF388805EF3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.c */; settings = {COMPILER_FLAGS = ""; }; };
+		43C40BC863A247EE873C5050 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.h */ = {isa = PBXBuildFile; fileRef = EA73CEBAD31B4534A566E34F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.h */; settings = {COMPILER_FLAGS = ""; }; };
+		5143C28584E04FA9A6113859 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zlib.h */ = {isa = PBXBuildFile; fileRef = 15AB3DF235F34A56BC63D8A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zlib.h */; settings = {COMPILER_FLAGS = ""; }; };
+		56A51626CE014E44A554F8D1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.c */ = {isa = PBXBuildFile; fileRef = 9EE4C377475C4F36940B0804 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.c */; settings = {COMPILER_FLAGS = ""; }; };
+		578B24D0D7F046508338054C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/adler32.c */ = {isa = PBXBuildFile; fileRef = D56E1F605ED54B92B8DB19B9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/adler32.c */; settings = {COMPILER_FLAGS = ""; }; };
+		7BD4D6856C7649C59AD6BA3C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/zconf.h */ = {isa = PBXBuildFile; fileRef = ABF4D9C80ED64078813172B2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/zconf.h */; settings = {COMPILER_FLAGS = ""; }; };
+		9D550B31282D4C82A85CAA52 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.c */ = {isa = PBXBuildFile; fileRef = A5047B56C329429BA674630E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A8DFB15806C94178AC43196A /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.h */ = {isa = PBXBuildFile; fileRef = FB5DCF37DAF448869B1BE74F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.h */; settings = {COMPILER_FLAGS = ""; }; };
+		AAE425130EFC43DF838B594B /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffixed.h */ = {isa = PBXBuildFile; fileRef = E7C5DD54CC124E40B1176FE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffixed.h */; settings = {COMPILER_FLAGS = ""; }; };
+		AB00424DD0164F778C183DB8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.h */ = {isa = PBXBuildFile; fileRef = 2B00231F5BDB44A8B1551BE5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.h */; settings = {COMPILER_FLAGS = ""; }; };
+		B858EC1837B24B2FA2971232 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.c */ = {isa = PBXBuildFile; fileRef = 4A1E17CEDF0843D79955F4F7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B9B084C4C34D4DC0B03701E1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzlib.c */ = {isa = PBXBuildFile; fileRef = 717C0CF8AD5348A29CA845CC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzlib.c */; settings = {COMPILER_FLAGS = ""; }; };
+		BA393D0F52CB40B292C53FF4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/compress.c */ = {isa = PBXBuildFile; fileRef = 90776234FEC34A99AFDE8E35 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/compress.c */; settings = {COMPILER_FLAGS = ""; }; };
+		BD1407996B634277BA732EF9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.h */ = {isa = PBXBuildFile; fileRef = C380C2A94F834DBF96614A18 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.h */; settings = {COMPILER_FLAGS = ""; }; };
+		C71D9518542C44FBAF1024BE /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.h */ = {isa = PBXBuildFile; fileRef = 864AD11029AA4E35AAF7E420 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.h */; settings = {COMPILER_FLAGS = ""; }; };
+		CCEA431BC9114044892A6B89 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzwrite.c */ = {isa = PBXBuildFile; fileRef = B173A341F7224325A7E4CAE1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzwrite.c */; settings = {COMPILER_FLAGS = ""; }; };
+		DC447FEFF2A74E048F78E5FF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.c */ = {isa = PBXBuildFile; fileRef = 372B62B0E3304D86BAEE6293 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F2225F4CEE2644149DD5908F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/infback.c */ = {isa = PBXBuildFile; fileRef = C327A7200043489C8C684478 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/infback.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F5FC84701819477FB3A348BA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.c */ = {isa = PBXBuildFile; fileRef = 2E7646E6FB8E40ECAD47974D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		5CE6BE8AC20D4538B3B1A20E /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		7FFCA317D53E4FBAA76D19EA /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		8271B17FCE514A3BBEB4E05A = {
+			isa = PBXBuildStyle;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		06928FCC29E24027B22B9B8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C583979B764BB1A499C00A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC45772546C4D5B89BAB731;
+			remoteInfo = zlib;
+		};
+		478A5CC81843460E9D9458FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C583979B764BB1A499C00A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+		73643CAE265A45D095E8F52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C583979B764BB1A499C00A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED674C5E94940899768FC7C;
+			remoteInfo = ALL_BUILD;
+		};
+		7EA314FE5EC8482F830C1998 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C583979B764BB1A499C00A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+		F448D6CFC7664D7A951D94BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C583979B764BB1A499C00A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33FCD3DEE13A48EDB5CA1926;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15AB3DF235F34A56BC63D8A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zlib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zlib.h; path = zlib.h; sourceTree = SOURCE_ROOT; };
+		2173F8E2959D4E0D959EAF71 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = deflate.h; path = deflate.h; sourceTree = SOURCE_ROOT; };
+		28FCBF161A2A4DAB86D2BDC7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2B00231F5BDB44A8B1551BE5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inffast.h; path = inffast.h; sourceTree = SOURCE_ROOT; };
+		2E7646E6FB8E40ECAD47974D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inflate.c; path = inflate.c; sourceTree = SOURCE_ROOT; };
+		372B62B0E3304D86BAEE6293 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zutil.c; path = zutil.c; sourceTree = SOURCE_ROOT; };
+		380E79F807404F80B7BF980B /* zlib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzlib.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AF0399B0C447F6B3340128 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzguts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = gzguts.h; path = gzguts.h; sourceTree = SOURCE_ROOT; };
+		4A1E17CEDF0843D79955F4F7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = trees.c; path = trees.c; sourceTree = SOURCE_ROOT; };
+		717C0CF8AD5348A29CA845CC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzlib.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzlib.c; path = gzlib.c; sourceTree = SOURCE_ROOT; };
+		7ED97E76DEFE412AAEC634AF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		864AD11029AA4E35AAF7E420 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inflate.h; path = inflate.h; sourceTree = SOURCE_ROOT; };
+		90776234FEC34A99AFDE8E35 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compress.c; path = compress.c; sourceTree = SOURCE_ROOT; };
+		9B31EDF3F63D41D2809510F1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9EE4C377475C4F36940B0804 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inffast.c; path = inffast.c; sourceTree = SOURCE_ROOT; };
+		A3FC6BFA1E5B458B96EADC8C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = deflate.c; path = deflate.c; sourceTree = SOURCE_ROOT; };
+		A5047B56C329429BA674630E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = inftrees.c; path = inftrees.c; sourceTree = SOURCE_ROOT; };
+		ABF4D9C80ED64078813172B2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/zconf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zconf.h; path = "../../../ios/build/iPhoneOS-armv7/3rdparty/zlib/zconf.h"; sourceTree = SOURCE_ROOT; };
+		B173A341F7224325A7E4CAE1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzwrite.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzwrite.c; path = gzwrite.c; sourceTree = SOURCE_ROOT; };
+		B2289389A142431B9E094F94 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/uncompr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uncompr.c; path = uncompr.c; sourceTree = SOURCE_ROOT; };
+		C327A7200043489C8C684478 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/infback.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = infback.c; path = infback.c; sourceTree = SOURCE_ROOT; };
+		C380C2A94F834DBF96614A18 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inftrees.h; path = inftrees.h; sourceTree = SOURCE_ROOT; };
+		C4A51BE5DBC44CF388805EF3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = crc32.c; path = crc32.c; sourceTree = SOURCE_ROOT; };
+		D0377C0347574A679236F892 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzclose.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzclose.c; path = gzclose.c; sourceTree = SOURCE_ROOT; };
+		D40C0C14338A440D94F88720 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gzread.c; path = gzread.c; sourceTree = SOURCE_ROOT; };
+		D56E1F605ED54B92B8DB19B9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/adler32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adler32.c; path = adler32.c; sourceTree = SOURCE_ROOT; };
+		E7C5DD54CC124E40B1176FE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffixed.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = inffixed.h; path = inffixed.h; sourceTree = SOURCE_ROOT; };
+		EA73CEBAD31B4534A566E34F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = trees.h; path = trees.h; sourceTree = SOURCE_ROOT; };
+		FA2949DE109A441AA786F317 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zutil.h; path = zutil.h; sourceTree = SOURCE_ROOT; };
+		FB5DCF37DAF448869B1BE74F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crc32.h; path = crc32.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		082D9CF21291420FA9205016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				380E79F807404F80B7BF980B /* zlib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2280C221AE604737A644ADBF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D56E1F605ED54B92B8DB19B9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/adler32.c */,
+				90776234FEC34A99AFDE8E35 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/compress.c */,
+				C4A51BE5DBC44CF388805EF3 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.c */,
+				A3FC6BFA1E5B458B96EADC8C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.c */,
+				D0377C0347574A679236F892 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzclose.c */,
+				717C0CF8AD5348A29CA845CC /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzlib.c */,
+				D40C0C14338A440D94F88720 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzread.c */,
+				B173A341F7224325A7E4CAE1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzwrite.c */,
+				C327A7200043489C8C684478 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/infback.c */,
+				9EE4C377475C4F36940B0804 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.c */,
+				2E7646E6FB8E40ECAD47974D /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.c */,
+				A5047B56C329429BA674630E /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.c */,
+				4A1E17CEDF0843D79955F4F7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.c */,
+				B2289389A142431B9E094F94 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/uncompr.c */,
+				372B62B0E3304D86BAEE6293 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		25CE7C13037A4844A8F0844D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2E6837B7B6834EBEB7CB219A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				A7A79CCDD28A4378A55F5CE7 /* CMake Rules */,
+				7ED97E76DEFE412AAEC634AF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		97855E29B20C4CFFBB427D62 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A6D481BB82404A7AB5A023D9 /* ZERO_CHECK */,
+				FC88F2AAEBB4414DB8B1CF3E /* 3rdparty */,
+				2E6837B7B6834EBEB7CB219A /* ALL_BUILD */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A6D481BB82404A7AB5A023D9 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				AC9BBADADC274EF6A5961A75 /* CMake Rules */,
+				9B31EDF3F63D41D2809510F1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		A7A79CCDD28A4378A55F5CE7 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		AC9BBADADC274EF6A5961A75 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B9C516E8D69F479C850A56CE = {
+			isa = PBXGroup;
+			children = (
+				97855E29B20C4CFFBB427D62 /* Sources */,
+				25CE7C13037A4844A8F0844D /* Resources */,
+				082D9CF21291420FA9205016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D03643A81F8543B680B32F40 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4D9C80ED64078813172B2 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/zconf.h */,
+				FB5DCF37DAF448869B1BE74F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.h */,
+				2173F8E2959D4E0D959EAF71 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.h */,
+				44AF0399B0C447F6B3340128 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzguts.h */,
+				2B00231F5BDB44A8B1551BE5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.h */,
+				E7C5DD54CC124E40B1176FE8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffixed.h */,
+				864AD11029AA4E35AAF7E420 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.h */,
+				C380C2A94F834DBF96614A18 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.h */,
+				EA73CEBAD31B4534A566E34F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.h */,
+				15AB3DF235F34A56BC63D8A8 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zlib.h */,
+				FA2949DE109A441AA786F317 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		DE9B045BD7C848909050155F /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				2280C221AE604737A644ADBF /* Source Files */,
+				D03643A81F8543B680B32F40 /* Header Files */,
+				28FCBF161A2A4DAB86D2BDC7 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/CMakeLists.txt */,
+			);
+			name = zlib;
+			sourceTree = "<group>";
+		};
+		FC88F2AAEBB4414DB8B1CF3E /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				DE9B045BD7C848909050155F /* zlib */,
+			);
+			name = 3rdparty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC45772546C4D5B89BAB731 /* zlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CA167D9DD4B4319A74E6085 /* Build configuration list for PBXNativeTarget "zlib" */;
+			buildPhases = (
+				053B9E0CA9F44A6D99E1388B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				593C69F097214579B8217187 /* PBXTargetDependency */,
+			);
+			name = zlib;
+			productName = zlib;
+			productReference = 380E79F807404F80B7BF980B /* zlib */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C583979B764BB1A499C00A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = C6576A47D9F64D96B89B7AA1 /* Build configuration list for PBXProject "zlib" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				7FFCA317D53E4FBAA76D19EA /* Debug */,
+				5CE6BE8AC20D4538B3B1A20E /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = B9C516E8D69F479C850A56CE;
+			projectDirPath = /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib;
+			projectRoot = "";
+			targets = (
+				0ED674C5E94940899768FC7C /* ALL_BUILD */,
+				995AA054170D436593FF856E /* RUN_TESTS */,
+				33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */,
+				2F57837EA08047B69490775B /* install */,
+				3F08C5B41DE94A65AC2D1481 /* package */,
+				DAC45772546C4D5B89BAB731 /* zlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D3D10BCB2444F18812438A4 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		25EDF059251B443CB7D6918A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		50707CB1403547C58D49517F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5EF74D4512E94000A16865A0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		62C42EB18575458DB240577F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7306558598064E9BBB45511C = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8F876AB36AFE4B68AC93A900 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		945CDCF2C8104819ADEF8B2D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9D9AD269789543FAB9298437 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AA48AED68DD14D468146DC0E /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib -f /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		053B9E0CA9F44A6D99E1388B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578B24D0D7F046508338054C /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/adler32.c */,
+				BA393D0F52CB40B292C53FF4 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/compress.c */,
+				37B7AF48C9794FC18686A4F5 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/crc32.c */,
+				34C5F1F00E454942B7D5B3C9 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/deflate.c */,
+				005F0E0DA9AC4C5AB9503901 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzclose.c */,
+				B9B084C4C34D4DC0B03701E1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzlib.c */,
+				22BBFB20FDBC40A8A4724C2B /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzread.c */,
+				CCEA431BC9114044892A6B89 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/gzwrite.c */,
+				F2225F4CEE2644149DD5908F /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/infback.c */,
+				56A51626CE014E44A554F8D1 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inffast.c */,
+				F5FC84701819477FB3A348BA /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inflate.c */,
+				9D550B31282D4C82A85CAA52 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/inftrees.c */,
+				B858EC1837B24B2FA2971232 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/trees.c */,
+				1F7807AFEABD4667B57A1310 /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/uncompr.c */,
+				DC447FEFF2A74E048F78E5FF /* /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib/zutil.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CCA8FA51E584EDA992B192D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = 478A5CC81843460E9D9458FF /* PBXContainerItemProxy */;
+		};
+		527637FB8A154547923A2492 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = 7EA314FE5EC8482F830C1998 /* PBXContainerItemProxy */;
+		};
+		593C69F097214579B8217187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33FCD3DEE13A48EDB5CA1926 /* ZERO_CHECK */;
+			targetProxy = F448D6CFC7664D7A951D94BC /* PBXContainerItemProxy */;
+		};
+		97796046A98B4056B89A63EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC45772546C4D5B89BAB731 /* zlib */;
+			targetProxy = 06928FCC29E24027B22B9B8E /* PBXContainerItemProxy */;
+		};
+		9CE0617531E74885B877A96D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED674C5E94940899768FC7C /* ALL_BUILD */;
+			targetProxy = 73643CAE265A45D095E8F52E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B81B4E010244C7E9DC45C01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		3A7309460755466BBA5068E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		5DDEDD04D8AA47A59CB34E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		654DC3C0AB3547D1870F3B1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		6CB84FE8DA9242AD81435380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC         -DDEBUG -D_DEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = zlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		783D71BD2EDA4D2BA5AD2D60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		7C3A2E25EC574E78A03023A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		90BB5DEC903444199D69436C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/build";
+			};
+			name = Release;
+		};
+		A8FE00AFD7D9499F81440354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		C3670032B49B48A39F0AB67B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		C9F46F4AE6654449AEA019D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		E10B753E06A644528690A343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				SDKROOT = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk;
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib/build";
+			};
+			name = Debug;
+		};
+		EA7605D65DD44832AB0BBC67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		F52E6AE58E2E4481B0F1A2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", NO_FSEEKO, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib", /Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/opencv/3rdparty/zlib, "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-unused-function -Wno-overloaded-virtual -fPIC   -fPIC     -DNDEBUG  -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = zlib;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/nayeonk/Documents/MIT/UROP/superUROP/Rephotography/ios/build/iPhoneOS-armv7/3rdparty/zlib";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		240E9AB3008640BB91DC8467 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3670032B49B48A39F0AB67B /* Debug */,
+				EA7605D65DD44832AB0BBC67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		302FC753D2D540208E22928C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C3A2E25EC574E78A03023A0 /* Debug */,
+				3A7309460755466BBA5068E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7CA167D9DD4B4319A74E6085 /* Build configuration list for PBXNativeTarget "zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB84FE8DA9242AD81435380 /* Debug */,
+				F52E6AE58E2E4481B0F1A2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A7471D24370D478DA151DB92 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654DC3C0AB3547D1870F3B1A /* Debug */,
+				A8FE00AFD7D9499F81440354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BEE30BE57EE748469D97589D /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F46F4AE6654449AEA019D2 /* Debug */,
+				2B81B4E010244C7E9DC45C01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C6576A47D9F64D96B89B7AA1 /* Build configuration list for PBXProject "zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10B753E06A644528690A343 /* Debug */,
+				90BB5DEC903444199D69436C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D8DFFC02B4C143CDB3BAA0BE /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDEDD04D8AA47A59CB34E5F /* Debug */,
+				783D71BD2EDA4D2BA5AD2D60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C583979B764BB1A499C00A /* Project object */;
+}
