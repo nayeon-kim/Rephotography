@@ -34,7 +34,7 @@ using namespace cv;
 - (IBAction)didTapLoadButton:(id)sender;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
-@property (nonatomic, strong) cv::Mat refImage;
+@property (nonatomic) cv::Mat refImage;
 
 
 @end

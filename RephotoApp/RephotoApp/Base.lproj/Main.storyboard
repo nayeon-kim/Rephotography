@@ -18,21 +18,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Sf-5a-ewY">
-                                <rect key="frame" x="194" y="531" width="115" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Load Photo">
-                                    <color key="titleColor" red="1" green="0.54544313990000004" blue="0.68733770139999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27i-M3-h6l"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Of7-Su-uyG">
-                                <rect key="frame" x="17" y="194" width="292" height="327"/>
+                                <rect key="frame" x="20" y="194" width="292" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
@@ -46,7 +33,20 @@
                                     <color key="titleColor" red="0.0032426257929216717" green="0.28874385388971335" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="captureStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQV-4N-4E6"/>
+                                    <action selector="didStartCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMr-dB-s31"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Sf-5a-ewY">
+                                <rect key="frame" x="169" y="10" width="143" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Load Photo">
+                                    <color key="titleColor" red="1" green="0.54544313990000004" blue="0.68733770139999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27i-M3-h6l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,8 +57,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="loadButton" destination="5Sf-5a-ewY" id="s6X-9I-8Zu"/>
-                        <outlet property="loadedImageView" destination="Of7-Su-uyG" id="cPF-wK-TtN"/>
-                        <outlet property="videoCaptureView" destination="mrV-qJ-2pk" id="OF9-4l-QFY"/>
+                        <outlet property="loadedImageView" destination="mrV-qJ-2pk" id="fvl-ay-dJl"/>
+                        <outlet property="videoCaptureView" destination="Of7-Su-uyG" id="nNG-dG-Y5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
