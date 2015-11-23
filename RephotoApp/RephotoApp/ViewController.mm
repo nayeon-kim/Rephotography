@@ -8,12 +8,6 @@
 
 #import "ViewController.h"
 //#import <opencv2/highgui/cap_ios.h>
-//using namespace cv;
-
-//@interface ViewController
-//@interface ViewController : UIViewController<CvVideoCameraDelegate>
-
-//@end
 
 @implementation ViewController
 //@synthesize imageView;
@@ -30,6 +24,8 @@
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
 //    self.videoCamera.grayscale = NO;
+    
+    self.imageLoaded = false;
 }
 
 
@@ -42,11 +38,15 @@
 
 - (IBAction)didStartCapture:(id)sender;
 {
-    // TODO: only start camera capture if self.cvImg exists. else show message, please load an image
-    [self.videoCamera start];
-    // TODO: linear blend of each frame in self.videoCamera and self.cvImg
-    NSLog(@"video camera running: %d", [self.videoCamera running]);
-    NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
+    if (self.imageLoaded) {
+        [self.videoCamera start];
+        NSLog(@"video camera running: %d", [self.videoCamera running]);
+        NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Reference Image" message:@"Please load a photo before starting!" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil ];
+        
+        [alertView show];
+    }
 }
 
 - (IBAction)didTapLoadButton:(id)sender;
@@ -67,20 +67,18 @@
     [self dismissModalViewControllerAnimated:YES];
     
     cv::Mat cvImg = [self UIImageToMat:image];
-    
-    //TODO: save cvImg as a property?
     self.refImage = cvImg;
+    self.imageLoaded = true;
 }
 
+// Convert from UIImage to CV Mat
 - (cv::Mat) UIImageToMat: (UIImage *)loadedImage;
 {
-    // Convert from UIImage to CV Mat
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(loadedImage.CGImage);
     CGFloat cols = loadedImage.size.width;
     CGFloat rows = loadedImage.size.height;
     
     cv::Mat cvMat(rows, cols, CV_8UC4);                                 // 8 bits per component, 4 channels
-    
     CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to backing data
                                                     cols,                      // Width of bitmap
                                                     rows,                     // Height of bitmap
@@ -92,7 +90,6 @@
     
     CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), loadedImage.CGImage);
     CGContextRelease(contextRef);
-//    UIImageToMat(loadedImage, cvImage);
     return cvMat;
 }
 
@@ -106,25 +103,20 @@
     
     Mat refIm;
     NSLog(@"processImage began running");
-    // Do some OpenCV stuff with the image
-//    Mat image_copy;
-//    cvtColor(image, image_copy, CV_BGRA2BGR);
-    
-    //TODO: try debug with cvtColor
+    //    Mat image_copy;
+    //    cvtColor(image, image_copy, CV_BGRA2BGR);
     
     // invert image
-//    bitwise_not(image_copy, image_copy);
-//    cvtColor(image_copy, image, CV_BGR2BGRA);
-    
-    //TODO: I guess this method runs when the video capture is turned on? (doub. check), so do linear blending with self.cvImg here.
+    //    bitwise_not(image_copy, image_copy);
+    //    cvtColor(image_copy, image, CV_BGR2BGRA);
+
     cv::resize(self.refImage, refIm, image.size(), 0, 0, INTER_LINEAR );
-    int dstSize[] = {refIm.rows, refIm.cols};
-    Mat dst(2, dstSize, CV_BGRA2BGR);
-//    cv::resize(self.refImage, refIm, image_copy.size(), 0, 0, INTER_LINEAR );
+    addWeighted( image, alpha, refIm, beta, 0.0, image);
+
 //    NSLog(@"imgCopy size: %f", image_copy.size);
 //    NSLog(@"refImg size: %f", self.refImage.size());
 //    NSLog(@"dst size: %f", dst.size());
-    addWeighted( image, alpha, refIm, beta, 0.0, image);
+    
 }
 #endif
 

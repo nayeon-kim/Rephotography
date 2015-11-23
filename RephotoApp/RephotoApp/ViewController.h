@@ -35,7 +35,7 @@ using namespace cv;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 @property (nonatomic) cv::Mat refImage;
-
+@property (nonatomic) bool imageLoaded;
 
 @end
 
