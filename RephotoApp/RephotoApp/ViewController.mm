@@ -101,14 +101,14 @@
 #ifdef __cplusplus
 - (void)processImage:(Mat&)image;
 {
-    double alpha = 0.8;
-    double beta = 0.2;
+    double alpha = 0.7;
+    double beta = 0.3;
     
     Mat refIm;
-//    NSLog(@"processImage began running");
+    NSLog(@"processImage began running");
     // Do some OpenCV stuff with the image
-    Mat image_copy;
-    cvtColor(image, image_copy, CV_BGRA2BGR);
+//    Mat image_copy;
+//    cvtColor(image, image_copy, CV_BGRA2BGR);
     
     //TODO: try debug with cvtColor
     
@@ -117,14 +117,14 @@
 //    cvtColor(image_copy, image, CV_BGR2BGRA);
     
     //TODO: I guess this method runs when the video capture is turned on? (doub. check), so do linear blending with self.cvImg here.
-    cv::resize(self.refImage, refIm, image_copy.size(), 0, 0, INTER_LINEAR );
+    cv::resize(self.refImage, refIm, image.size(), 0, 0, INTER_LINEAR );
     int dstSize[] = {refIm.rows, refIm.cols};
     Mat dst(2, dstSize, CV_BGRA2BGR);
 //    cv::resize(self.refImage, refIm, image_copy.size(), 0, 0, INTER_LINEAR );
 //    NSLog(@"imgCopy size: %f", image_copy.size);
 //    NSLog(@"refImg size: %f", self.refImage.size());
 //    NSLog(@"dst size: %f", dst.size());
-    addWeighted( image_copy, alpha, refIm, beta, 0.0, dst);
+    addWeighted( image, alpha, refIm, beta, 0.0, image);
 }
 #endif
 
