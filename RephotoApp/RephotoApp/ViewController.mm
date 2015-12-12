@@ -34,21 +34,19 @@
 
 #pragma mark - UI Actions
 
-- (IBAction)didTapLoadButton:(id)sender;
-{
+- (IBAction)didTapLoadButton:(id)sender {
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     pickerController.delegate = self;
     [self presentModalViewController:pickerController animated:YES];
-    
 }
 
-- (IBAction)didStartCapture:(id)sender;
-{
+- (IBAction)didStartCapture:(id)sender {
     if (self.imageLoaded) {
         
         // update dimensions of UIImageView videoCaptureView
         videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
-        
+//        videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, self.refImage.rows/10, self.refImage.cols/10);
+
         [self.videoCamera start];
         NSLog(@"video camera running: %d", [self.videoCamera running]);
         NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
@@ -70,17 +68,14 @@
     [self dismissModalViewControllerAnimated:YES];
 
     cv::Mat cvImg = [self UIImageToMat:image];
-//    cv::Mat cvImg;
-//    UIImageToMat(image, cvImg);
 
-    
     // Canny Edge Detector with picked image
-    
     Mat cvImg_gray;
+    Mat cvImg_blurred;
     Mat cvMatrix, edges;
     
-    int ratio = 3;
-    int kernel_size = 3;
+//    int ratio = 3;
+    int kernel_size = 23;
     
     /// Create a matrix of the same type and size as src (for dst)
     cvMatrix.create( cvImg.size(), cvImg.type() );
@@ -88,28 +83,37 @@
     /// Convert the image to grayscale
     cvtColor( cvImg, cvImg_gray, CV_BGR2GRAY );
     
-//    int CannyThreshold = 0.0;
-    
     /// Show the image
-//    CannyThreshold(0, 0);
     
-    /// Reduce noise with a kernel 3x3
-//    blur( cvImg_gray, cvImg_gray, cv::Size(3,3));
-//    cv::GaussianBlur(cvImg_gray, cvImg_gray, cv::Size(5, 5));
+    /// Reduce noise with a kernel 3x3 (test with multiple smoothing filters)
+//    blur( cvImg_gray, cvImg_blurred, cv::Size(kernel_size,kernel_size));
+//    GaussianBlur(cvImg_gray, cvImg_blurred, cv::Size(kernel_size,kernel_size), 1, 1);
+    bilateralFilter ( cvImg_gray, cvImg_blurred, kernel_size, kernel_size*2, kernel_size/2 );
     
+    /// Canny detector (test with different threshold values)
+    //    Canny( detected_edges, detected_edges, lowThreshold, lowThreshold*ratio, kernel_size );
+    //    Canny( cvImg_gray, edges, 100.0, 300.0, 3 );
     
-    /// Canny detector
-    Canny( cvImg_gray, edges, 100.0, 300.0, 3 );
-//    Canny( cvImg_gray, detected_edges, CannyThreshold, CannyThreshold*ratio, kernel_size );
+    /// Draw contours
+    vector<vector<cv::Point> > contours;
+    vector<Vec4i> hierarchy;
+    Canny( cvImg_blurred, edges, 10, 40, 3 );
+    findContours( edges, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    
+    RNG rng(12345);
+    Mat drawing = Mat::zeros( edges.size(), CV_8UC3 );
+    for( int i = 0; i< contours.size(); i++ )
+    {
+        Scalar color = Scalar(255,255,255);
+        drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, cv::Point() );
+    }
 
     /// Using Canny's output as a mask, we display our result
     cvMatrix = Scalar::all(0.0);
-    cvImg.copyTo( cvMatrix, edges );
-//    cvImg += detected_edges;
+//    cvImg_gray.copyTo( cvMatrix, edges );
+//    cvImg.copyTo( cvMatrix, drawing );
     
-    self->loadedImageView.image = MatToUIImage(cvMatrix);
-
-    self.refImage = cvImg;
+    self.refImage = drawing;
     self.imageLoaded = true;
 }
 /**
@@ -120,7 +124,6 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     int len = std::max(src.cols, src.rows);
     cv::Point2f pt(len/2., len/2.);
     cv::Mat r = cv::getRotationMatrix2D(pt, angle, 1.0);
-    
     cv::warpAffine(src, dst, r, cv::Size(len, len));
 }
 
@@ -131,8 +134,10 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     
     UIImageOrientation orientation = loadedImage.imageOrientation;
     CGFloat cols, rows;
-    rows = loadedImage.size.height;
-    cols = loadedImage.size.width;
+    cols = loadedImage.size.height;
+    rows = loadedImage.size.width;
+    NSLog(@"cols: %f", cols);
+    NSLog(@"rows: %f", rows);
     
     cv::Mat cvMat(rows, cols, CV_8UC4);                                 // 8 bits per component, 4 channels
     CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to backing data
@@ -162,20 +167,16 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     double alpha = 0.3;
     double beta = 0.7;
     
-    Mat refIm;
-    NSLog(@"processImage began running");
-    //    Mat image_copy;
-    //    cvtColor(image, image_copy, CV_BGRA2BGR);
-    
-    // invert image
-    //    bitwise_not(image_copy, image_copy);
-    //    cvtColor(image_copy, image, CV_BGR2BGRA);
+    Mat refIm, image_copy;
+    cvtColor(image, image_copy, CV_BGRA2BGR);
 
-    cv::resize(self.refImage, refIm, image.size(), 0, 0, INTER_LINEAR );
-    addWeighted( image, alpha, refIm, beta, 0.0, image);
+    cv::resize(self.refImage, refIm, image_copy.size(), 0, 0, INTER_LINEAR );
+    cvtColor(refIm, refIm, CV_BGRA2BGR);
+    // linear blend edges onto the live feed
+    addWeighted( image_copy, alpha, refIm, beta, 0.0, image);
 
-//    NSLog(@"imgCopy size: %f", image_copy.size);
-//    NSLog(@"refImg size: %f", self.refImage.size());
+    NSLog(@"img size: %f", image.size);
+    NSLog(@"refImg size: %f", self.refImage.size);
 //    NSLog(@"dst size: %f", dst.size());
     
 }
