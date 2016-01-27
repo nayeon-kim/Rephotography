@@ -20,7 +20,7 @@ using namespace cv;
 @interface ViewController : UIViewController <CvVideoCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     IBOutlet UIImageView* videoCaptureView;
-    IBOutlet UIImageView* loadedImageView;
+//    IBOutlet UIImageView* loadedImageView;
     IBOutlet UIButton* loadButton;
     CvVideoCamera* videoCamera;
 }

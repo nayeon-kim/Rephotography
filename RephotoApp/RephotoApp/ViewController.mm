@@ -64,7 +64,11 @@
          didFinishPickingImage:(UIImage *)image
                    editingInfo:(NSDictionary *)editingInfo
 {
-    self->loadedImageView.image = image;
+//    self->loadedImageView.image = image;
+    
+    
+    videoCaptureView.image = image;
+    
     [self dismissModalViewControllerAnimated:YES];
     
     cv::Mat cvImg = [self UIImageToMat:image];
@@ -119,7 +123,11 @@
     //    cvImg.copyTo( cvMatrix, drawing );
     
     //    self->loadedImageView.image = MatToUIImage(cvMatrix);
-    self->loadedImageView.image = MatToUIImage(drawing);
+    
+    
+//    TESTING no loadedImageView.image
+//    self->loadedImageView.image = MatToUIImage(drawing);
+    videoCaptureView.image = MatToUIImage(drawing);
     
     //    self.refImage = cvMatrix;
     self.refImage = drawing;
