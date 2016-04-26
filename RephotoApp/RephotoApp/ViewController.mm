@@ -9,13 +9,11 @@
 #import "ViewController.h"
 
 @implementation ViewController
-//@synthesize imageView;
 @synthesize videoCamera;
-//@synthesize loadedImageView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //    Initialize Video
     self.videoCamera = [[CvVideoCamera alloc] initWithParentView:videoCaptureView];
     self.videoCamera.delegate = self;
@@ -35,6 +33,8 @@
 #pragma mark - UI Actions
 
 - (IBAction)didTapLoadButton:(id)sender {
+//    TODO: if videoCapture on, then turn off first
+    
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     pickerController.delegate = self;
     [self presentModalViewController:pickerController animated:YES];
@@ -43,11 +43,19 @@
 - (IBAction)didStartCapture:(id)sender {
     if (self.imageLoaded) {
         
-        // update dimensions of UIImageView videoCaptureView
-        videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
+// TODO: update dimensions of UIImageView videoCaptureView
+//       videoCaptureView.contentMode = UIViewContentModeScaleToFill;
+//       videoCaptureView.contentMode =  UIViewContentModeCenter;
+        
+//        videoCaptureView.contentMode = ;
+        
+//        videoCaptureView.frame = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
+        
+//        videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
         //        videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, self.refImage.rows/10, self.refImage.cols/10);
         
         [self.videoCamera start];
+        
         NSLog(@"video camera running: %d", [self.videoCamera running]);
         NSLog(@"capture session loaded: %d", [self.videoCamera captureSessionLoaded]);
     } else {
@@ -64,16 +72,13 @@
          didFinishPickingImage:(UIImage *)image
                    editingInfo:(NSDictionary *)editingInfo
 {
-//    self->loadedImageView.image = image;
-    
-    
     videoCaptureView.image = image;
     
     [self dismissModalViewControllerAnimated:YES];
     
-    cv::Mat cvImg = [self UIImageToMat:image];
-    //    cv::Mat cvImg;
-    //    UIImageToMat(image, cvImg);
+    cv::Mat cvRefImg = [self UIImageToMat:image];
+//        cv::Mat cvRefImg;
+//        UIImageToMat(image, cvRefImg);
     
     // Canny Edge Detector with picked image
     Mat cvImg_gray;
@@ -84,10 +89,10 @@
     //    int kernel_size = 3;
     
     /// Create a matrix of the same type and size as src (for dst)
-    cvMatrix.create( cvImg.size(), cvImg.type() );
+    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
     
     /// Convert the image to grayscale
-    cvtColor( cvImg, cvImg_gray, CV_BGR2GRAY );
+    cvtColor( cvRefImg, cvImg_gray, CV_BGR2GRAY );
     
     //    int CannyThreshold = 0.0;
     
@@ -122,11 +127,7 @@
     //    cvImg_gray.copyTo( cvMatrix, edges );
     //    cvImg.copyTo( cvMatrix, drawing );
     
-    //    self->loadedImageView.image = MatToUIImage(cvMatrix);
-    
-    
-//    TESTING no loadedImageView.image
-//    self->loadedImageView.image = MatToUIImage(drawing);
+    //    self->loadedImageView.image = MatToUIImage(cvMatrix)
     videoCaptureView.image = MatToUIImage(drawing);
     
     //    self.refImage = cvMatrix;
@@ -145,7 +146,7 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     cv::warpAffine(src, dst, r, cv::Size(len, len));
 }
 
-// Convert from UIImage to CV Mat
+// Convert from UIImage to CV Mat : commenting out for now to use standard func
 - (cv::Mat) UIImageToMat: (UIImage *)loadedImage;
 {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(loadedImage.CGImage);
@@ -158,7 +159,8 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     NSLog(@"rows: %f", rows);
     //TODO: shouldn't the width be cols
     
-    cv::Mat cvMat(rows, cols, CV_8UC4);                                 // 8 bits per component, 4 channels
+    cv::Mat cvMat(rows, cols, CV_8UC4);
+//    cv::Mat cvMat(rows, cols, CV_8UC3);       // 8 bits per component, 4 channels
     CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to backing data
                                                     cols,                      // Width of bitmap
                                                     rows,                     // Height of bitmap
@@ -181,29 +183,53 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
 #pragma mark - Protocol CvVideoCameraDelegate
 
 #ifdef __cplusplus
-- (void)processImage:(Mat&)image;
+- (void)processImage:(Mat&)currentFrame;
 {
-    double alpha = 0.3;
-    double beta = 0.7;
+    cv::Mat refIm, refIm_gray, image_copy;
+    cv::Mat KLTIm, status, err;
+    vector<cv::Point2f> featPts, nextPts;
     
-    Mat refIm, image_copy;
-    //    NSLog(@"processImage began running");
-    //    Mat image_copy;
-    cvtColor(image, image_copy, CV_BGRA2BGR);
+    // 3 channel image frame
+    //    cvtColor(currentFrame, image_copy, CV_BGRA2BGR);
+    cvtColor(currentFrame, currentFrame, CV_BGRA2BGR);
     
     // invert image
     //    bitwise_not(image_copy, image_copy);
     //    cvtColor(image_copy, image, CV_BGR2BGRA);
     
-    cv::resize(self.refImage, refIm, image_copy.size(), 0, 0, INTER_LINEAR );
+    cv::resize(self.refImage, refIm, currentFrame.size(), 0, 0, INTER_LINEAR );
+    std::cout << "currentFrame size: " << currentFrame.size() << '\n';
+    std::cout << "refIm size: " << self.refImage.size() << '\n';
     cvtColor(refIm, refIm, CV_BGRA2BGR);
     //    image_copy += refIm;
-    addWeighted( image_copy, alpha, refIm, beta, 0.0, image);
     
-    NSLog(@"img size: %f", image.size);
+    // TODO: eventually find overlay or += rather than blend.
+    double alpha = 0.8;
+    double beta = 0.2;
+//    addWeighted( currentFrame, alpha, refIm, beta, 0.0, currentFrame );
+    
+    
+    // Params for ShiTomasi corner detection
+    // Get refPts from refIm (must grayscale first)
+    cvtColor( refIm, refIm_gray, CV_BGR2GRAY );
+    goodFeaturesToTrack(refIm_gray, featPts, 5, 0.3, 7);
+
+    std::cout << "featPts size: " << featPts.size() << '\n';
+    calcOpticalFlowPyrLK(refIm, currentFrame, featPts, nextPts, status, err);
+    // TODO: need to plot points to sanity check
+    cv::Mat HMatrix = findHomography(featPts, nextPts);
+//    cv::Mat HMatrix = findHomography(nextPts, featPts);
+    //    calcOpticalFlowPyrLK(8-bit inputRefImage, sameSizeSameType 8-bit currentFrameImage, vec<2D float single-precision points> featPts, vec<2D points> nextPts, OutputArray status, OutputArray err);
+    warpPerspective(currentFrame, currentFrame, HMatrix, currentFrame.size());
+    
+    currentFrame += refIm;
+    
+    // TODO: Need to save alpha info before
+//    cvtColor(currentFrame, currentFrame, CV_BGR2BGRA);
+    
+    
+    NSLog(@"img size: %f", currentFrame.size);
     NSLog(@"refImg size: %f", self.refImage.size);
-    //    NSLog(@"dst size: %f", dst.size());
-    
 }
 #endif
 

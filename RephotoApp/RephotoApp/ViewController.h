@@ -20,15 +20,9 @@ using namespace cv;
 @interface ViewController : UIViewController <CvVideoCameraDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     IBOutlet UIImageView* videoCaptureView;
-//    IBOutlet UIImageView* loadedImageView;
     IBOutlet UIButton* loadButton;
     CvVideoCamera* videoCamera;
 }
-
-//@property (weak, nonatomic) IBOutlet UILabel* title;
-//@property (nonatomic, retain) CvVideoCamera* videoCamera;
-//@property (strong, nonatomic) IBOutlet UIImageView* loadedImageView;
-
 
 - (IBAction)didStartCapture:(id)sender;
 - (IBAction)didTapLoadButton:(id)sender;
