@@ -12,7 +12,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import <opencv2/features2d/features2d.hpp>
+#import <opencv2/nonfree/features2d.hpp>
 #import <opencv2/highgui/cap_ios.h>
 #import <opencv2/highgui/ios.h>
 using namespace cv;
@@ -29,6 +30,7 @@ using namespace cv;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 @property (nonatomic) cv::Mat refImage;
+@property (nonatomic) cv::Mat refContours;
 @property (nonatomic) bool imageLoaded;
 
 @end

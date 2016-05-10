@@ -34,7 +34,6 @@
 
 - (IBAction)didTapLoadButton:(id)sender {
 //    TODO: if videoCapture on, then turn off first
-    
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     pickerController.delegate = self;
     [self presentModalViewController:pickerController animated:YES];
@@ -46,9 +45,6 @@
 // TODO: update dimensions of UIImageView videoCaptureView
 //       videoCaptureView.contentMode = UIViewContentModeScaleToFill;
 //       videoCaptureView.contentMode =  UIViewContentModeCenter;
-        
-//        videoCaptureView.contentMode = ;
-        
 //        videoCaptureView.frame = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
         
 //        videoCaptureView.bounds = CGRectMake(videoCaptureView.bounds.origin.x, videoCaptureView.bounds.origin.y, videoCaptureView.frame.size.width, self.refImage.cols * (videoCaptureView.frame.size.width/self.refImage.rows));
@@ -72,12 +68,11 @@
          didFinishPickingImage:(UIImage *)image
                    editingInfo:(NSDictionary *)editingInfo
 {
-    videoCaptureView.image = image;
+//    videoCaptureView.image = image;
     
     [self dismissModalViewControllerAnimated:YES];
     
     cv::Mat cvRefImg = [self UIImageToMat:image];
-//        cv::Mat cvRefImg;
 //        UIImageToMat(image, cvRefImg);
     
     // Canny Edge Detector with picked image
@@ -127,11 +122,33 @@
     //    cvImg_gray.copyTo( cvMatrix, edges );
     //    cvImg.copyTo( cvMatrix, drawing );
     
-    //    self->loadedImageView.image = MatToUIImage(cvMatrix)
-    videoCaptureView.image = MatToUIImage(drawing);
-    
     //    self.refImage = cvMatrix;
-    self.refImage = drawing;
+    self.refImage = cvRefImg;
+    self.refContours = drawing;
+    
+    // TESTING: goodFeaturesToTrack vs. SIFT vs. SURF
+    // TEST1: gFTT
+//    vector<cv::Point2f> featPts;
+//    cv::Mat featPtMat, testContours;
+//    cv::Point p(0.0, 0.0);
+//    cvtColor( self.refImage, testContours, CV_BGRA2GRAY );
+//    goodFeaturesToTrack(testContours, featPts, 10, 0.3, 7);
+//    
+//    for ( int i=0; i < featPts.size(); i++ ) {
+//        Point2f pt = featPts[i];
+//        circle(cvRefImg, pt, 20, Scalar(255,0,0), 10);
+//    }
+    
+    // TEST1: SURF
+    SurfFeatureDetector detector( 5000 );
+    std::vector<KeyPoint> keypoints;
+    detector.detect( cvRefImg, keypoints );
+    Mat img_keypoints;
+    cvtColor( cvRefImg, cvRefImg, CV_BGRA2RGB);
+    drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
+    
+     videoCaptureView.image = MatToUIImage(img_keypoints);
+    
     //    self.refImage = cvImg;
     self.imageLoaded = true;
 }
@@ -188,6 +205,7 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     cv::Mat refIm, refIm_gray, image_copy;
     cv::Mat KLTIm, status, err;
     vector<cv::Point2f> featPts, nextPts;
+    UIImage *testIm;
     
     // 3 channel image frame
     //    cvtColor(currentFrame, image_copy, CV_BGRA2BGR);
@@ -208,16 +226,22 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     double beta = 0.2;
 //    addWeighted( currentFrame, alpha, refIm, beta, 0.0, currentFrame );
     
-    
     // Params for ShiTomasi corner detection
     // Get refPts from refIm (must grayscale first)
     cvtColor( refIm, refIm_gray, CV_BGR2GRAY );
-    goodFeaturesToTrack(refIm_gray, featPts, 5, 0.3, 7);
-
+//    goodFeaturesToTrack(refIm_gray, featPts, 5, 0.3, 7);
+    // TEST: SURF
+    SurfFeatureDetector detector( 5000 );
+    std::vector<KeyPoint> keypoints;
+    detector.detect( refIm, keypoints );
+    Mat img_keypoints;
+    cvtColor( refIm, refIm, CV_BGRA2RGB);
+//    drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
+    
     std::cout << "featPts size: " << featPts.size() << '\n';
-    calcOpticalFlowPyrLK(refIm, currentFrame, featPts, nextPts, status, err);
+//    calcOpticalFlowPyrLK(refIm, currentFrame, keypoints, nextPts, status, err);
     // TODO: need to plot points to sanity check
-    cv::Mat HMatrix = findHomography(featPts, nextPts);
+    cv::Mat HMatrix = findHomography(featPts, keypoints);
 //    cv::Mat HMatrix = findHomography(nextPts, featPts);
     //    calcOpticalFlowPyrLK(8-bit inputRefImage, sameSizeSameType 8-bit currentFrameImage, vec<2D float single-precision points> featPts, vec<2D points> nextPts, OutputArray status, OutputArray err);
     warpPerspective(currentFrame, currentFrame, HMatrix, currentFrame.size());
