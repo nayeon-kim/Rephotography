@@ -41,11 +41,9 @@
         [self.videoCamera stop];
         self.captureInSession = false;
     }
-    std::cout << "didTapLoadButton" << '\n';
     UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
     pickerController.delegate = self;
     [self presentModalViewController:pickerController animated:YES];
-    //TODO: Resize on load before processing
 }
 
 - (IBAction)didStartCapture:(id)sender {
@@ -80,19 +78,12 @@
     [self dismissModalViewControllerAnimated:YES];
     
     // Scale and Resize Ref Photo to Fit videoCaptureView
-//    videoCaptureView.contentMode = UIViewContentModeScaleAspectFill;
     UIImage *selectedImage = [self imageWithImage:selectedImg scaledToWidth:videoCaptureView.frame.size.width];
     
     cv::Mat cvRefImg;
     UIImageToMat(selectedImage, cvRefImg);
 //    cv::Mat cvRefImg = [self UIImageToMat:selectedImage];
-    std::cout << "selectedImage size: " << selectedImage.size.width << '\n';
-    std::cout << "selectedImage size: " << selectedImage.size.height << '\n';
-    //        UIImageToMat(image, cvRefImg);
 //    cv::resize(cvRefImg, cvRefImg, videoCaptureView.frame.size, 0, 0, INTER_LINEAR );
-//    std::cout << "currentFrame size: " << currentFrame.size() << '\n';
-    std::cout << "cvrefIm size: " << cvRefImg.size() << '\n';
-
     
     // Canny Edge Detector with picked image
     Mat cvRefImg_gray;
@@ -100,34 +91,39 @@
     Mat cvMatrix, cannyEdges;
     
     /// Create a matrix of the same type and size as src (for dst)
-//    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
+    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
     
     /// Convert the image to grayscale
-//    cvtColor( cvRefImg, cvRefImg_gray, CV_BGR2GRAY );
+    cvtColor( cvRefImg, cvRefImg_gray, CV_BGR2GRAY );
     
     /// Reduce noise with a kernel 3x3
-//    bilateralFilter ( cvRefImg_gray, cvRefImg_blurred, 23, 23*2, 23/2 );
+    int d = floor(videoCaptureView.frame.size.width/20);
+    std::cout << "what is d " << d << '\n';
+    bilateralFilter ( cvRefImg_gray, cvRefImg_blurred, d, d*2, d/2 );
     
     /// Canny detector
-//    vector<vector<cv::Point> > contours;
-//    vector<Vec4i> hierarchy;
-//    int kernel_size = 3;
-//    Canny( cvRefImg_blurred, cannyEdges, 10, 40, kernel_size );
-//    findContours( cannyEdges, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    vector<vector<cv::Point> > contours;
+    vector<Vec4i> hierarchy;
+    int kernel_size = 3;
+    Canny( cvRefImg_blurred, cannyEdges, 90, 120, kernel_size );
+    findContours( cannyEdges, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
     /// Draw contours
-//    RNG rng(12345);
-//    Mat drawing = Mat::zeros( cannyEdges.size(), CV_8UC3 );
-//    for( int i = 0; i< contours.size(); i++ ){
-//        Scalar color = Scalar(255,255,255);
-//        drawContours( drawing, contours, i, color, 2, 8, hierarchy, 0, cv::Point() );
-//    }
+    RNG rng(12345);
+    Mat drawing = Mat::zeros( cannyEdges.size(), CV_8UC3 );
+    for( int i = 0; i< contours.size(); i++ ){
+        std::cout << "what is arclength " << arcLength(contours[i], false) << '\n';
+        // Discard short edges
+        int shortEdgeThresh = 50;
+        if (arcLength(contours[i], false) > shortEdgeThresh || arcLength(contours[i], true) > shortEdgeThresh) {
+            Scalar color = Scalar(255,255,255);
+            drawContours( drawing, contours, i, color, 1.5, 8, hierarchy, 0, cv::Point() );
+        }
+    }
     
-    //    self.refImage = cvMatrix;
     self.refImage = cvRefImg;
-//    self.refContours = drawing;
-//    videoCaptureView.image = MatToUIImage(self.refContours);
-    videoCaptureView.image = MatToUIImage(self.refImage);
+    self.refContours = drawing;
+    videoCaptureView.image = MatToUIImage(self.refContours);
     // TEST1: SURF
     //    SurfFeatureDetector detector( 5000 );
     //    std::vector<KeyPoint> keypoints;
