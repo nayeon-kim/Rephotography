@@ -78,9 +78,12 @@
     [self dismissModalViewControllerAnimated:YES];
     
     // Scale and Resize Ref Photo to Fit videoCaptureView
-    UIImage *selectedImage = [self imageWithImage:selectedImg scaledToWidth:videoCaptureView.frame.size.width];
+//    UIImage *selectedImage = [self imageWithImage:selectedImg scaledToWidth:videoCaptureView.frame.size.width];
+    UIImage *scaledSelectedImage = [self imageWithImage:selectedImg scaledToWidth:288];
+    UIImage *selectedImage = [self imageWithInsets:scaledSelectedImage];
     
     cv::Mat cvRefImg;
+    
     UIImageToMat(selectedImage, cvRefImg);
 //    cv::Mat cvRefImg = [self UIImageToMat:selectedImage];
 //    cv::resize(cvRefImg, cvRefImg, videoCaptureView.frame.size, 0, 0, INTER_LINEAR );
@@ -91,7 +94,7 @@
     Mat cvMatrix, cannyEdges;
     
     /// Create a matrix of the same type and size as src (for dst)
-    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
+//    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
     
     /// Convert the image to grayscale
     cvtColor( cvRefImg, cvRefImg_gray, CV_BGR2GRAY );
@@ -110,7 +113,7 @@
     
     /// Draw contours
     RNG rng(12345);
-    Mat drawing = Mat::zeros( cannyEdges.size(), CV_8UC3 );
+    Mat drawing = Mat::zeros( cannyEdges.size(), CV_8UC4 );
     for( int i = 0; i< contours.size(); i++ ){
         std::cout << "what is arclength " << arcLength(contours[i], false) << '\n';
         // Discard short edges
@@ -124,16 +127,16 @@
     self.refImage = cvRefImg;
     self.refContours = drawing;
     videoCaptureView.image = MatToUIImage(self.refContours);
-    // TEST1: SURF
-    //    SurfFeatureDetector detector( 5000 );
-    //    std::vector<KeyPoint> keypoints;
-    //    detector.detect( cvRefImg, keypoints );
-    //    Mat img_keypoints;
-    //    cvtColor( cvRefImg, cvRefImg, CV_BGRA2RGB);
-    //    drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
     
-    //     videoCaptureView.image = MatToUIImage(img_keypoints);
-    //    videoCaptureView.image = MatToUIImage(cvRefImg);
+    // TEST1: SURF - DEBUG: not doing so good :(
+//        SurfFeatureDetector detector( 10000, 10, 5 );
+//        std::vector<KeyPoint> keypoints;
+//        detector.detect( cvRefImg, keypoints );
+//        Mat img_keypoints;
+//        cvtColor( cvRefImg, cvRefImg, CV_BGRA2RGB);
+//        drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
+//    
+//         videoCaptureView.image = MatToUIImage(img_keypoints);
     self.imageLoaded = true;
 }
 /**
@@ -157,6 +160,26 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     
     UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight));
     [sourceImage drawInRect:CGRectMake(0, 0, newWidth, newHeight)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+-(UIImage*) imageWithInsets:(UIImage *)oldImage {
+    // Setup a new context with the correct size
+    CGFloat width = 288;
+    CGFloat height = 352;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), YES, 0.0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    UIGraphicsPushContext(context);
+
+    // Now we can draw anything we want into this new context.
+    CGPoint origin = CGPointMake((width - oldImage.size.width) / 2.0f,
+                                 (height - oldImage.size.height) / 2.0f);
+    [oldImage drawAtPoint:origin];
+
+    // Clean up and get the new image.
+    UIGraphicsPopContext();
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
@@ -207,23 +230,20 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
         self.initStable = false;
     }
    
-    
-    cv::Mat refIm, refIm_gray, image_copy;
+    cv::Mat refIm, refIm3, refIm_gray, currentFrame3;
     cv::Mat KLTIm, status, err;
     vector<cv::Point2f> featPts, nextPts;
     
     // 3 channel image frame
-    //    cvtColor(currentFrame, image_copy, CV_BGRA2BGR);
-    cvtColor(currentFrame, currentFrame, CV_BGRA2BGR);
+    cvtColor(currentFrame, currentFrame3, CV_BGRA2BGR);
     
-    // invert image
-    //    bitwise_not(image_copy, image_copy);
     //    cvtColor(image_copy, image, CV_BGR2BGRA);
-    
+//    refIm = self.refImage;
+    refIm = self.refContours;
 //    cv::resize(self.refImage, refIm, currentFrame.size(), 0, 0, INTER_LINEAR );
 //    std::cout << "currentFrame size: " << currentFrame.size() << '\n';
 //    std::cout << "refIm size: " << self.refImage.size() << '\n';
-    cvtColor(refIm, refIm, CV_BGRA2BGR);
+    cvtColor(refIm, refIm3, CV_BGRA2BGR);
     //    image_copy += refIm;
     
     // Params for ShiTomasi corner detection
