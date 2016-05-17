@@ -27,11 +27,19 @@ using namespace cv;
 
 - (IBAction)didStartCapture:(id)sender;
 - (IBAction)didTapLoadButton:(id)sender;
+- (IBAction)didTapStabilize:(id)sender;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 @property (nonatomic) cv::Mat refImage;
 @property (nonatomic) cv::Mat refContours;
+@property (nonatomic) cv::Mat stableFrame;
 @property (nonatomic) bool imageLoaded;
+@property (nonatomic) bool captureInSession;
+@property (nonatomic) bool initStable;
 
 @end
+
+//@interface UIImage
+//+(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize
+//@end
 
