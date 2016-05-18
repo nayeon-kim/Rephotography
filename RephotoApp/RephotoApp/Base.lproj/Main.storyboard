@@ -23,16 +23,6 @@
                                     <action selector="didStartCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMr-dB-s31"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Sf-5a-ewY">
-                                <rect key="frame" x="21" y="30" width="86" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99867315738015483" green="1" blue="0.7370198613129979" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Load Photo"/>
-                                <connections>
-                                    <action selector="didTapLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27i-M3-h6l"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lif-B9-56b">
                                 <rect key="frame" x="221" y="31" width="83" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,6 +37,16 @@
                                 <rect key="frame" x="0.0" y="81" width="320" height="467"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Sf-5a-ewY">
+                                <rect key="frame" x="20" y="30" width="86" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99867315738015483" green="1" blue="0.7370198613129979" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Load Photo"/>
+                                <connections>
+                                    <action selector="didTapLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27i-M3-h6l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

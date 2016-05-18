@@ -59,9 +59,11 @@
 }
 
 - (IBAction)didTapStabilize:(id)sender {
+    
     if (self.captureInSession) {
-        // TODO: store a frame as self.stableFrame.
         self.initStable = true;
+        //Should change contentMode here to allow warping?
+//         videoCaptureView.contentMode = UIViewContentModeCenter;
     } else {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Camera Running" message:@"There is no camera to stabilize!" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil ];
         [alertView show];
@@ -91,17 +93,16 @@
     // Canny Edge Detector with picked image
     Mat cvRefImg_gray;
     Mat cvRefImg_blurred;
-    Mat cvMatrix, cannyEdges;
+    Mat cannyEdges;
     
     /// Create a matrix of the same type and size as src (for dst)
-//    cvMatrix.create( cvRefImg.size(), cvRefImg.type() );
     
     /// Convert the image to grayscale
     cvtColor( cvRefImg, cvRefImg_gray, CV_BGR2GRAY );
     
     /// Reduce noise with a kernel 3x3
     int d = floor(videoCaptureView.frame.size.width/20);
-    std::cout << "what is d " << d << '\n';
+//    std::cout << "what is d " << d << '\n';
     bilateralFilter ( cvRefImg_gray, cvRefImg_blurred, d, d*2, d/2 );
     
     /// Canny detector
@@ -115,12 +116,12 @@
     RNG rng(12345);
     Mat drawing = Mat::zeros( cannyEdges.size(), CV_8UC4 );
     for( int i = 0; i< contours.size(); i++ ){
-        std::cout << "what is arclength " << arcLength(contours[i], false) << '\n';
+//        std::cout << "what is arclength " << arcLength(contours[i], false) << '\n';
         // Discard short edges
         int shortEdgeThresh = 50;
         if (arcLength(contours[i], false) > shortEdgeThresh || arcLength(contours[i], true) > shortEdgeThresh) {
             Scalar color = Scalar(255,255,255);
-            drawContours( drawing, contours, i, color, 1.5, 8, hierarchy, 0, cv::Point() );
+            drawContours( drawing, contours, i, color, 1.6, 8, hierarchy, 0, cv::Point() );
         }
     }
     
@@ -234,98 +235,85 @@ void rotate(cv::Mat& src, double angle, cv::Mat& dst)
     cv::Mat KLTIm, status, err;
     vector<cv::Point2f> featPts, nextPts;
     
-    // 3 channel image frame
-    cvtColor(currentFrame, currentFrame3, CV_BGRA2BGR);
-    
-    //    cvtColor(image_copy, image, CV_BGR2BGRA);
-//    refIm = self.refImage;
-    refIm = self.refContours;
-//    cv::resize(self.refImage, refIm, currentFrame.size(), 0, 0, INTER_LINEAR );
-//    std::cout << "currentFrame size: " << currentFrame.size() << '\n';
-//    std::cout << "refIm size: " << self.refImage.size() << '\n';
+    refIm = self.refImage;
     cvtColor(refIm, refIm3, CV_BGRA2BGR);
-    //    image_copy += refIm;
-    
+
     // Params for ShiTomasi corner detection
-    // Get refPts from refIm (must grayscale first)
     cvtColor( refIm, refIm_gray, CV_BGR2GRAY );
     //    goodFeaturesToTrack(refIm_gray, featPts, 5, 0.3, 7);
-    // TEST: SURF
-    
-    //    SurfFeatureDetector detector( 5000 );
-    ////    std::vector<KeyPoint> keypoints;
-    //    std::vector<KeyPoint> keypoints_ref, keypoints_current;
-    //
-    //    detector.detect( refIm, keypoints_ref );
-    //    //DEBUG:  keypoints_current size is 0
-    //    detector.detect( currentFrame, keypoints_current );
-    //    drawKeypoints( currentFrame, keypoints_current, currentFrame, Scalar(255,0,0));
-    //
-    ////    Mat img_keypoints;
-    ////    cvtColor( refIm, refIm, CV_BGRA2RGB);
-    ////    drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
-    //
-    //    FlannBasedMatcher matcher;
-    //    Mat descriptors_ref, descriptors_current;
-    //    std::vector< DMatch > matches;
-    //
-    //    SurfDescriptorExtractor extractor;
-    //
-    //    //DEBUG:descriptors_current is zero and keypoints_current is also size=0
-    //    extractor.compute( refIm, keypoints_ref, descriptors_ref );
-    //    extractor.compute( currentFrame, keypoints_current, descriptors_current );
-    //
-    //
-    //    if(descriptors_ref.type()!=CV_32F) {
-    //        descriptors_ref.convertTo(descriptors_ref, CV_32F);
-    //    }
-    //
-    //    if(descriptors_current.type()!=CV_32F) {
-    //        descriptors_current.convertTo(descriptors_current, CV_32F);
-    //    }
-    //
-    //    //print # descriptor - descriptors_current does not contain any descriptors
-    //    matcher.match( descriptors_ref, descriptors_current, matches );
-    //
-    //    std::vector< DMatch > good_matches;
-    //    double max_dist = 0; double min_dist = 100;
-    //    for( int i = 0; i < descriptors_ref.rows; i++ ){
-    //        if( matches[i].distance < 3*min_dist ){
-    //            good_matches.push_back( matches[i]); }
-    //    }
-    //    std::vector<Point2f> refPts;
-    //    std::vector<Point2f> currentPts;
-    //
-    //    for( int i = 0; i < good_matches.size(); i++ )
-    //    {
-    //        //-- Get the keypoints from the good matches
-    //        refPts.push_back( keypoints_ref[ good_matches[i].queryIdx ].pt );
-    //        currentPts.push_back( keypoints_current[ good_matches[i].trainIdx ].pt );
-    //    }
-    //
-    //    std::cout << "featPts size: " << featPts.size() << '\n';
-    ////    calcOpticalFlowPyrLK(refIm, currentFrame, keypoints, nextPts, status, err);
-    //
-    //    // TODO: need to plot points to sanity check
-    //    cv::Mat HMatrix = findHomography(refPts, currentPts, CV_RANSAC);
-    //    cv::Mat HMatrix = findHomography(nextPts, featPts);
-    //    calcOpticalFlowPyrLK(8-bit inputRefImage, sameSizeSameType 8-bit currentFrameImage, vec<2D float single-precision points> featPts, vec<2D points> nextPts, OutputArray status, OutputArray err);
-    //    warpPerspective(currentFrame, currentFrame, HMatrix, currentFrame.size());
     
     
     if (!(self.stableFrame.empty())) {
-        // if you have a stable frame do the stabilizing things
+        // If you have a stable frame do the stabilizing things
+        
+        // TEST: SURF
+        SurfFeatureDetector detector( 10000, 10, 5 );
+        std::vector<KeyPoint> keypoints_stable, keypoints_current;
+        
+        detector.detect( self.stableFrame, keypoints_stable );
+        detector.detect( currentFrame, keypoints_current );
+//        cvtColor( currentFrame, currentFrame, CV_BGRA2RGB);
+//        drawKeypoints( currentFrame, keypoints_current, currentFrame, Scalar(255,0,0));
+//        cvtColor( currentFrame, currentFrame, CV_BGR2RGBA);
+        //    drawKeypoints( cvRefImg, keypoints, img_keypoints, Scalar(255,0,0));
+        
+        FlannBasedMatcher matcher;
+        Mat descriptors_stable, descriptors_current;
+        std::vector< DMatch > matches;
+        
+        SurfDescriptorExtractor extractor;
+        extractor.compute( self.stableFrame, keypoints_stable, descriptors_stable );
+        extractor.compute( currentFrame, keypoints_current, descriptors_current );
+        
+        if(descriptors_stable.type()!=CV_32F) {
+            descriptors_stable.convertTo(descriptors_stable, CV_32F);
+        }
+        
+        if(descriptors_current.type()!=CV_32F) {
+            descriptors_current.convertTo(descriptors_current, CV_32F);
+        }
+        
+        matcher.match( descriptors_stable, descriptors_current, matches );
+        
+        if (matches.size() > 4){
+//            drawMatches(self.stableFrame, keypoints_stable, currentFrame, keypoints_current, matches, currentFrame);
+            //if there are no matches, probably out of frame
+            std::vector< DMatch > good_matches;
+            double max_dist = 0; double min_dist = 200;
+            int goodMatchCount = descriptors_stable.rows;
+            for( int i = 0; i < goodMatchCount; i++ ){
+                if( matches[i].distance < 3*min_dist && good_matches.size() < 4){
+                    good_matches.push_back( matches[i]); }
+            }
+            std::vector<Point2f> refPts;
+            std::vector<Point2f> currentPts;
+            
+            for( int i = 0; i < good_matches.size(); i++ )
+            {
+                //-- Get the keypoints from the good matches
+                refPts.push_back( keypoints_stable[ good_matches[i].queryIdx ].pt );
+                currentPts.push_back( keypoints_current[ good_matches[i].trainIdx ].pt );
+            }
+            
+            // TODO: need to plot points to sanity check
+                    cv::Mat HMatrix = findHomography(currentPts, refPts, CV_RANSAC);
+            //        cv::Mat warpMatrix = getAffineTransform(refPts, currentPts);
+//            cv::Mat warpMatrix = getPerspectiveTransform(currentPts, refPts);
+            currentFrame += self.refContours;
+            
+            warpPerspective(currentFrame, currentFrame, HMatrix, currentFrame.size());
+            //        warpAffine (currentFrame, currentFrame, warpMatrix, currentFrame.size());
+            //        currentFrame += (self.stableFrame * 0.5);
+        } else {
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Out of Frame Error" message:@"You're too far from the desired location!" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil ];
+//            [alertView show];
+            std::cout << "You're too far out of frame. " << '\n';
+        }
+    
     } else {
-        currentFrame += refIm;
+        // 4 channels
+        currentFrame += self.refContours;
     }
-    
-    
-    // TODO: Need to save alpha info before
-    //    cvtColor(currentFrame, currentFrame, CV_BGR2BGRA);
-    
-    
-    NSLog(@"img size: %f", currentFrame.size);
-    NSLog(@"refImg size: %f", self.refImage.size);
 }
 #endif
 

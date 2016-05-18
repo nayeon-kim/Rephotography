@@ -27,7 +27,7 @@ using namespace cv;
 
 - (IBAction)didStartCapture:(id)sender;
 - (IBAction)didTapLoadButton:(id)sender;
-- (IBAction)didTapStabilize:(id)sender;
+- (IBAction)didTapStabilize:(id)stableButton;
 
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 @property (nonatomic) cv::Mat refImage;
@@ -39,7 +39,4 @@ using namespace cv;
 
 @end
 
-//@interface UIImage
-//+(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize
-//@end
 
